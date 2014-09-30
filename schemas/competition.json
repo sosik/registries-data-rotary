@@ -3,6 +3,23 @@
     "id": "uri://registries/competition#",
     "new": {
         "table": "competitions",
+        "_security": {
+            "_create": {
+                "_static": [
+                    "Security - write"
+                ]
+            },
+            "_read": {
+                "_static": [
+                    "Security - read"
+                ]
+            },
+            "_modify": {
+                "_static": [
+                    "Security - write"
+                ]
+            }
+        },
         "title": "Nová súťaž",
         "xxtransCode": "schema.stadium.title",
         "listFields": [
@@ -12,23 +29,6 @@
             }
         ],
         "properties": {
-            "_security": {
-                "_create": {
-                    "_static": [
-                        "Security - write"
-                    ]
-                },
-                "_read": {
-                    "_static": [
-                        "Security - read"
-                    ]
-                },
-                "_modify": {
-                    "_static": [
-                        "Security - write"
-                    ]
-                }
-            },
             "baseData": {
                 "title": "Základné údaje",
                 "type": "object",
@@ -86,13 +86,33 @@
                         "title": "Úroveň súťaže",
                         "type": "integer",
                         "required": true
+                    },
+                    "numberOfTeams": {
+                        "title": "Počet družstiev",
+                        "type": "integer",
+                        "required": true
+                    },
+                    "numberOfMatches": {
+                        "title": "Počet vzájomných stretnutí",
+                        "type": "integer",
+                        "required": true
                     }
                 }
             }
         }
     },
     "view": {
-        "$ref": "uri://registries/competition#new"
+        "title": "Detail súťaže",
+        "xxtransCode": "schema.stadium.title",
+        "table": "competitions",
+        "listFields": {
+            "$ref": "uri://registries/competition#new/listFields"
+        },
+        "properties": {
+            "baseData": {
+                "$ref": "uri://registries/competition#new/properties/baseData"
+            }
+        }
     },
     "search": {
         "table": "competitions",

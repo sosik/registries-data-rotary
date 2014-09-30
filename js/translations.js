@@ -147,7 +147,9 @@ angular.module('registries')
 		"schema.org.view":"Organizácia",
 		
 		"schema.member.title": "Môj profil",
-		"schema.member.view":"Osoba"
+		"schema.member.new":"Nová osoba",
+		"schema.member.view":"Profil osoby",
+		"schema.member.search":"Osoba"
 	});
 	
 	$translateProvider.translations('cz', {
@@ -293,6 +295,8 @@ angular.module('registries')
 		"schema.org.view":"Organizácia",
 
 		"schema.member.title": "Môj profil",
-		"schema.member.view":"Osoba"
+		"schema.member.new":"Nová osoba",
+		"schema.member.view":"Profil osoby",
+		"schema.member.search":"Osoba"
 	});
 }]);

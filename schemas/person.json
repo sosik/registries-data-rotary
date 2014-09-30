@@ -1,11 +1,10 @@
 {
 	"$schema" : "http://json-schema.org/schema#",
 	"id" : "uri://registries/person#",
-	
 	"new" : {
 		"table" : "people",
-		"title" : "Osoba",
-		"transCode": "schema.member.view",
+		"title" : "Nová osoba",
+		"transCode": "schema.member.new",
 		"properties" : {
 			"baseData" : {
 				"$ref": "uri://registries/people#person/properties/baseData"
@@ -42,14 +41,55 @@
 			}
 		}
 	},
+	
 	"view" : {
-		"$ref" : "uri://registries/person#new"
+		"table": "people",
+    	"title": "Profil osoby",
+		"transCode":"schema.member.view",
+        "listFields": {
+            "$ref": "uri://registries/people#person/listFields"
+        },
+        "properties": {
+			"baseData" : {
+				"$ref": "uri://registries/people#person/properties/baseData"
+			},
+			"player": {
+				"$ref": "uri://registries/people#person/properties/player"
+			},
+			"coach": {
+				"$ref": "uri://registries/people#person/properties/coach"
+			},
+			"referee": {
+				"$ref": "uri://registries/people#person/properties/referee"
+			},
+			"officer": {
+				"$ref": "uri://registries/people#person/properties/officer"
+			},
+			"medic": {
+				"$ref": "uri://registries/people#person/properties/medic"
+			},
+			"statistic": {
+				"$ref": "uri://registries/people#person/properties/statistic"
+			},
+			"photoInfo": {
+				"$ref": "uri://registries/people#person/properties/photoInfo"
+			},
+			"contactInfo": {
+				"$ref": "uri://registries/people#person/properties/contactInfo"
+			},
+			"otherInfo": {
+				"$ref": "uri://registries/people#person/properties/otherInfo"
+			},
+			"idInfo": {
+				"$ref": "uri://registries/people#person/properties/idInfo"
+			}
+        }
 	},
 	
 	"search" : {
 		"table": "people",
-    	"title": "osoba",
-		"transCode":"schema.member.view",
+    	"title": "Osoba",
+		"transCode":"schema.member.search",
         "listFields": {
             "$ref": "uri://registries/people#person/listFields"
         },

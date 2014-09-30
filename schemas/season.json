@@ -6,7 +6,10 @@
 		"title" : "Nový suťažný ročník",
 		"xxtransCode": "schema.stadium.title",
 		"listFields": [
-			{"field":"baseData.name", "title":"Názov ročníka"}
+			{
+				"field":"baseData.name",
+				"title":"Názov ročníka"
+			}
 		],
 		"properties":{
 			"_security": {
@@ -34,6 +37,24 @@
 						"title": "Názov",
 						"type": "string",
 						"required": true
+					},
+					"startSeason": {
+                        "title": "Dátum začiatku",
+                        "xxtransCode": "schema.season.baseData.startSeason",
+                        "type": "string",
+                        "required": true,
+                        "render": {
+                            "component": "psui-datepicker"
+                        }
+					},
+					"endSeason": {
+                        "title": "Dátum konca",
+                        "xxtransCode": "schema.season.baseData.endSeason",
+                        "type": "string",
+                        "required": true,
+                        "render": {
+                            "component": "psui-datepicker"
+                        }
 					}
 				}
 			}
