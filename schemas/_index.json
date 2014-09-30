@@ -30,5 +30,7 @@
 	"transfer.json",
 	"officer.json",
 	"medic.json",
-	"statistic.json"
+	"statistic.json",
+	"fees.json",
+	"events.json"
 ]

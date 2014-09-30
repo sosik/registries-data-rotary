@@ -2,6 +2,25 @@ angular.module('registries')
 .config(['$translateProvider', function($translateProvider) {
 	$translateProvider.preferredLanguage('sk');
 	$translateProvider.translations('sk', {
+		"schema.fees.listFields.name":"Meno",
+		"schema.fees.listFields.surName":"Priezvisko",
+		"schema.fees.new":"Nový príspevok",
+		"schema.fees.baseData":"Základné údaje",
+		"schema.fees.baseData.member":"Člen",
+		"schema.fees.baseData.membershipFee":"Výška príspevku",
+		"schema.fees.baseData.setupDate":"Dátum vystavenia",
+		"schema.fees.baseData.variableSymbol":"Variabilný symbol",
+		"schema.fees.baseData.dueDate":"Dátum splatnosti",
+		"schema.fees.baseData.membershipFeePaid":"Zaplatená čiastka",
+		"schema.fees.baseData.dateOfPayment":"Dátum zaplatenia",
+		"schema.fees.baseData.notes":"Poznámka",
+		"schema.fees.baseData.feePaymentStatus":"Stav",
+		"schema.fees.baseData.feePaymentStatus.paid":"Zaplatené",
+		"schema.fees.baseData.feePaymentStatus.unpaid":"Nezaplatené",
+		"schema.fees.view":"Členský príspevok",
+		"schema.fees.search":"Členský príspevok",
+
+	
 		"schema.people.baseData": "Základné informácie",
 		"schema.people.identifier": "Identifikačné číslo",
 		"schema.people.registrationID": "Registračné číslo",
@@ -132,6 +151,24 @@ angular.module('registries')
 	});
 	
 	$translateProvider.translations('cz', {
+		"schema.fees.listFields.name":"Jméno",
+		"schema.fees.listFields.surName":"Příjmení",
+		"schema.fees.new":"Nový příspěvek",
+		"schema.fees.baseData":"Základní údaje",
+		"schema.fees.baseData.member":"Člen",
+		"schema.fees.baseData.membershipFee":"Výše příspěvku",
+		"schema.fees.baseData.setupDate":"Datum vystavení",
+		"schema.fees.baseData.variableSymbol":"Variabilní symbol",
+		"schema.fees.baseData.dueDate":"Datum splatnosti",
+		"schema.fees.baseData.membershipFeePaid":"Zaplacená částka",
+		"schema.fees.baseData.dateOfPayment":"Datum zaplacení",
+		"schema.fees.baseData.notes":"Poznámka",
+		"schema.fees.baseData.feePaymentStatus":"Stav",
+		"schema.fees.baseData.feePaymentStatus.paid":"Zaplacené",
+		"schema.fees.baseData.feePaymentStatus.unpaid":"Nezaplacené",
+		"schema.fees.view":"Členský příspěvek",
+		"schema.fees.search":"Členský příspěvek",
+	
 		"schema.people.baseData": "Základné informácie",
 		"schema.people.identifier": "Identifikačné číslo",
 		"schema.people.registrationID": "Registračné číslo",
