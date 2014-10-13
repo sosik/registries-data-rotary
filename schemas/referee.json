@@ -29,11 +29,18 @@
         }
     },
     "view": {
-        "$ref": "uri://registries/referee#new"
+        "table": "people",
+        "title": "Rozhodca",
+        "transCode":"schema.people.referee.view",
+        "properties": {
+	        "$ref": "uri://registries/referee#new/properties"
+        }
+
     },
     "search": {
         "table": "people",
         "title": "Rozhodca",
+        "transCode":"schema.people.referee.search",
         "listFields": {
             "$ref": "uri://registries/people#person/listFields"
         },

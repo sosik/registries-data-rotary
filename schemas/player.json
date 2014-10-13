@@ -30,6 +30,7 @@
     },
 	"view": {
         "title": "Hráč",
+        "transCode": "schema.people.player.view",
         "table": "people",
 		"clientActions": [
 			{
@@ -66,6 +67,7 @@
     "search": {
         "table": "people",
         "title": "Hráč",
+        "transCode": "schema.people.player.search",
         "listFields": {
             "$ref": "uri://registries/people#person/properties/player/listFields"
         },

@@ -4,7 +4,7 @@
 	"type": "object",
 	"country":{
 		"title": "Štát",
-		"xxtransCode": "schema.people.baseData.nationality",
+		"transCode": "schema.people.country",
         "type": "string",
 		"enum":[
 			"SVK",

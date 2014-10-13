@@ -4,7 +4,7 @@
 	"type": "object",
 	"town":{
 		"title": "Obec",
-		"xxtransCode": "schema.people.baseData.town",
+		"transCode": "schema.people.city",
         "type": "string",
 		"enum":[
 			"Bánovce nad Bebravou",

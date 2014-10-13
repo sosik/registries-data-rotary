@@ -43,7 +43,7 @@
                         "title": "Výška príspevku",
                         "transCode": "schema.fees.baseData.membershipFee",
                         "type": "string",
-                        "required": false
+                        "required": true
                     },
                     "setupDate": {
                         "title": "Dátum vystavenia",
@@ -138,6 +138,8 @@
         }
     },
     "search": {
+        "title": "Členský príspevok",
+        "transCode": "schema.fees.search",
         "table": "fees",
         "_security": {
             "_create": {
@@ -156,8 +158,6 @@
                 ]
             }
         },
-        "title": "Členský príspevok",
-        "transCode": "schema.fees.search",
         "listFields": [
             {
                 "field": "baseData.member.refData.name",

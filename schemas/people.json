@@ -44,6 +44,7 @@
         },
         "baseData": {
             "title": "Základné údaje",
+            "transCode":"schema.people.baseData",
             "type": "object",
             "properties": {
                 "registrationID": {
@@ -140,6 +141,7 @@
         },
         "referee": {
             "title": "Rozhodca",
+            "transCode": "schema.people.referee",
             "type": "object",
             "properties": {
                 "isReferee": {
@@ -162,6 +164,7 @@
                 },
                 "firstAssociation": {
                     "title": "Prvotný zväz",
+                    "transCode": "schema.people.referee.firstAssociation",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -170,6 +173,7 @@
                 },
                 "stateOfReferee": {
                     "title": "Stav rozhodcu",
+                    "transCode": "schema.people.referee.stateOfReferee",
                     "type": "string",
                     "enum": [
                         "aktívny",
@@ -187,6 +191,7 @@
                 },
                 "association": {
                     "title": "Aktuálny zväz",
+                    "transCode": "schema.people.referee.association",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -195,16 +200,19 @@
                 },
                 "firstYear": {
                     "title": "Rok začiatku kariéry",
+                    "transCode": "schema.people.referee.firstYear",
                     "type": "string",
                     "required": false
                 },
                 "proffesionalCompetence": {
                     "title": "Odborná spôsobilosť od (rok)",
+                    "transCode": "schema.people.referee.proffesionalCompetence",
                     "type": "string",
                     "required": false
                 },
                 "dateOfRegistration": {
                     "title": "Dátum registrácie",
+                    "transCode": "schema.people.referee.dateOfRegistration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -213,11 +221,13 @@
                 },
                 "refereeLicense": {
                     "title": "Rozhodcovská licencia",
+                    "transCode": "schema.people.referee.refereeLicense",
                     "type": "string",
                     "required": false
                 },
                 "dateOfExpiration": {
                     "title": "Dátum platnosti preukazu",
+                    "transCode": "schema.people.referee.dateOfExpiration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -226,6 +236,7 @@
                 },
                 "dateOfApplicationForId": {
                     "title": "Dátum začiatku platnosti preukazu",
+                    "transCode": "schema.people.referee.dateOfApplicationForId",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -236,6 +247,7 @@
         },
         "coach": {
             "title": "Tréner",
+            "transCode": "schema.people.coach",
             "type": "object",
             "listFields": [
                 {
@@ -280,6 +292,7 @@
                 },
                 "firstAssociation": {
                     "title": "Prvotný zväz",
+                    "transCode": "schema.people.coach.firstAssociation",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -288,6 +301,7 @@
                 },
                 "stateOfCoach": {
                     "title": "Stav trénera",
+                    "transCode": "schema.people.coach.stateOfCoach",
                     "type": "string",
                     "enum": [
                         "aktívny",
@@ -305,6 +319,7 @@
                 },
                 "association": {
                     "title": "Aktuálny zväz",
+                    "transCode": "schema.people.coach.association",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -313,16 +328,19 @@
                 },
                 "firstYear": {
                     "title": "Rok začiatku kariéry",
+                    "transCode": "schema.people.coach.firstYear",
                     "type": "string",
                     "required": false
                 },
                 "proffesionalCompetence": {
                     "title": "Odborná spôsobilosť od (rok)",
+                    "transCode": "schema.people.coach.proffesionalCompetence",
                     "type": "string",
                     "required": false
                 },
                 "dateOfRegistration": {
                     "title": "Dátum registrácie",
+                    "transCode": "schema.people.coach.dateOfRegistration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -331,11 +349,13 @@
                 },
                 "coachLicense": {
                     "title": "Trénerská licencia",
+                    "transCode": "schema.people.coach.coachLicense",
                     "type": "string",
                     "required": false
                 },
                 "coachLicenseType": {
                     "title": "Typ licencie",
+                    "transCode": "schema.people.coach.coachLicenseType",
                     "type": " string",
                     "enum": [
                         "I",
@@ -353,6 +373,7 @@
 
                 "dateOfExpiration": {
                     "title": "Dátum platnosti preukazu",
+                    "transCode": "schema.people.coach.dateOfExpiration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -361,6 +382,7 @@
                 },
                 "dateOfApplicationForId": {
                     "title": "Dátum začiatku platnosti preukazu",
+                    "transCode": "schema.people.coach.dateOfApplicationForId",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -369,6 +391,7 @@
                 },
                 "feeDate": {
                     "title": "Poplatky",
+                    "transCode": "schema.people.coach.feeDate",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -377,6 +400,7 @@
                 },
                 "licenseSeminar": {
                     "title": "Licenčný seminár",
+                    "transCode": "schema.people.coach.licenseSeminar",
                     "type": "string",
                     "required": false
                 }
@@ -385,6 +409,7 @@
         },
         "officer": {
             "title": "Funkcionár",
+            "transCode":"schema.people.officer",
             "type": "object",
             "properties": {
                 "isOfficer": {
@@ -407,6 +432,7 @@
                 },
                 "association": {
                     "title": "Aktuálny zväz",
+                    "transCode":"schema.people.officer.association",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -415,6 +441,7 @@
                 },
                 "club": {
                     "title": "Klubová príslušnosť",
+                    "transCode":"schema.people.officer.club",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -423,13 +450,14 @@
                 },
                 "note": {
                     "title": "Poznámka",
-                    "transCode": "schema.people.note",
+                    "transCode":"schema.people.officer.note",
                     "type": "string",
                     "required": false,
                     "large": true
                 },
                 "dateOfRegistration": {
                     "title": "Dátum registrácie",
+                    "transCode":"schema.people.officer.dateOfRegistration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -438,6 +466,7 @@
                 },
                 "expiration": {
                     "title": "Platnosť do",
+                    "transCode":"schema.people.officer.expiration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -446,6 +475,7 @@
                 },
                 "stateOfOfficer": {
                     "title": "Stav funkcionára",
+                    "transCode":"schema.people.officer.stateOfOfficer",
                     "type": "string",
                     "enum": [
                         "aktívny",
@@ -463,6 +493,7 @@
                 },
                 "dateOfExpiration": {
                     "title": "Dátum platnosti preukazu",
+                    "transCode":"schema.people.officer.dateOfExpiration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -471,6 +502,7 @@
                 },
                 "dateOfApplicationForId": {
                     "title": "Dátum začiatku platnosti preukazu",
+                    "transCode":"schema.people.officer.dateOfApplicationForId",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -481,6 +513,7 @@
         },
         "medic": {
             "title": "Zdravotník",
+            "transCode": "schema.people.medic",
             "type": "object",
             "properties": {
                 "isMedic": {
@@ -503,6 +536,7 @@
                 },
                 "stateOfMedic": {
                     "title": "Stav zdravotníka",
+                    "transCode": "schema.people.medic.stateOfMedic",
                     "type": "string",
                     "enum": [
                         "aktívny",
@@ -520,6 +554,7 @@
                 },
                 "dateOfExpiration": {
                     "title": "Dátum platnosti preukazu",
+                    "transCode": "schema.people.medic.dateOfExpiration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -528,6 +563,7 @@
                 },
                 "dateOfApplicationForId": {
                     "title": "Dátum začiatku platnosti preukazu",
+                    "transCode": "schema.people.medic.dateOfApplicationForId",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -536,6 +572,7 @@
                 },
                 "validFrom": {
                     "title": "Dátum platnosti",
+                    "transCode": "schema.people.medic.validFrom",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -544,6 +581,7 @@
                 },
                 "validTo": {
                     "title": "Doba platnosti",
+                    "transCode": "schema.people.medic.validTo",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -552,6 +590,7 @@
                 },
                 "modifiedOn": {
                     "title": "Dátum aktualizácie",
+                    "transCode": "schema.people.medic.modifiedOn",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -561,7 +600,8 @@
             }
         },
         "statistic": {
-            "title": "Štatista",
+            "title": "Štatistik",
+            "transCode": "schema.people.statistic",
             "type": "object",
             "properties": {
                 "isStatistic": {
@@ -584,6 +624,7 @@
                 },
                 "stateOfStatistic": {
                     "title": "Stav štatistu",
+                    "transCode": "schema.people.statistic.stateOfStatistic",
                     "type": "string",
                     "enum": [
                         "aktívny",
@@ -601,6 +642,7 @@
                 },
                 "dateOfExpiration": {
                     "title": "Dátum platnosti preukazu",
+                    "transCode": "schema.people.statistic.dateOfExpiration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -609,6 +651,7 @@
                 },
                 "dateOfApplicationForId": {
                     "title": "Dátum začiatku platnosti preukazu",
+                    "transCode": "schema.people.statistic.dateOfApplicationForId",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -617,6 +660,7 @@
                 },
                 "validFrom": {
                     "title": "Dátum platnosti",
+                    "transCode": "schema.people.statistic.validFrom",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -625,6 +669,7 @@
                 },
                 "validTo": {
                     "title": "Doba platnosti",
+                    "transCode": "schema.people.statistic.validTo",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -634,6 +679,7 @@
                 ,
                 "modifiedOn": {
                     "title": "Dátum aktualizácie",
+                    "transCode": "schema.people.statistic.modifiedOn",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -645,10 +691,12 @@
         },
         "agent": {
             "title": "Agent",
+            "xxtransCode":"schema.people.agent",
             "type": "object",
             "properties": {
                 "firstAssociation": {
                     "title": "Prvotný zväz",
+                    "xxtransCode":"schema.people.agent.firstAssociation",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -657,6 +705,7 @@
                 },
                 "state": {
                     "title": "Stav",
+                    "xxtransCode":"schema.people.agent.state",
                     "type": "string",
                     "enum": [
                         "aktívny",
@@ -678,6 +727,7 @@
                 },
                 "association": {
                     "title": "Zväzová príslušnosť",
+                    "xxtransCode":"schema.people.agent.association",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -686,6 +736,7 @@
                 },
                 "expirationOfLicense": {
                     "title": "Platnosť licencie",
+                    "xxtransCode":"schema.people.agent.expirationOfLicense",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -694,6 +745,7 @@
                 },
                 "expirationOfInsurance": {
                     "title": "Platnosť poistenia",
+                    "xxtransCode":"schema.people.agent.expirationOfInsurance",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -702,6 +754,7 @@
                 },
                 "dateOfExpiration": {
                     "title": "Dátum platnosti preukazu",
+                    "xxtransCode":"schema.people.agent.dateOfExpiration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -710,6 +763,7 @@
                 },
                 "dateOfApplicationForId": {
                     "title": "Dátum začiatku platnosti preukazu",
+                    "xxtransCode":"schema.people.agent.dateOfApplicationForId",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -720,6 +774,7 @@
         },
         "player": {
             "title": "Hráč",
+            "transCode":"schema.people.player",
             "type": "object",
             "listFields": [
                 {
@@ -771,6 +826,7 @@
                 },
                 "clubOfFirstRegistration": {
                     "title": "Materský klub",
+                    "transCode": "schema.people.clubOfFirstRegistration",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -779,6 +835,7 @@
                 },
                 "club": {
                     "title": "Klubová príslušnosť",
+                    "transCode": "schema.people.club",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -787,6 +844,7 @@
                 },
                 "stateOfPlayer": {
                     "title": "Stav hráča",
+                    "transCode": "schema.people.stateOfPlayer",
                     "type": "string",
                     "enum": [
                         "aktívny",
@@ -805,16 +863,19 @@
                 },
                 "expirationOfProffesionalContract": {
                     "title": "Profesionálna zmluva",
+                    "transCode": "schema.people.expirationOfProffesionalContract",
                     "type": "string",
                     "required": false
                 },
                 "expirationOfAgentContract": {
                     "title": "Zmluva s agentom",
+                    "transCode": "schema.people.expirationOfAgentContract",
                     "type": "string",
                     "required": false
                 },
                 "expiration": {
                     "title": "Platnosť do",
+                    "transCode": "schema.people.expiration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -823,6 +884,7 @@
                 },
                 "registrationCanceled": {
                     "title": "Zrušená registrácia",
+                    "transCode": "schema.people.registrationCanceled",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -831,6 +893,7 @@
                 },
                 "dateOfRegistration": {
                     "title": "Dátum registrácie",
+                    "transCode": "schema.people.dateOfRegistration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -839,6 +902,7 @@
                 },
                 "dateOfExpiration": {
                     "title": "Dátum platnosti preukazu",
+                    "transCode": "schema.people.dateOfExpiration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -847,6 +911,7 @@
                 },
                 "dateOfApplicationForId": {
                     "title": "Dátum začiatku platnosti preukazu",
+                    "transCode": "schema.people.dateOfApplicationForId",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -855,6 +920,7 @@
                 },
                 "hostingStartDate": {
                     "title": "Dátum začiatku hosťovania",
+                    "transCode": "schema.people.hostingStartDate",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -863,13 +929,16 @@
                 },
                 "hostingEndDate": {
                     "title": "Dátum konca hosťovania",
+                    "transCode": "schema.people.hostingEndDate",
                     "type": "string",
                     "required": false,
                     "render": {
                         "component": "psui-datepicker"
                     }
-                },"validFrom": {
+                },
+                "validFrom": {
                     "title": "Dátum platnosti",
+                    "transCode": "schema.people.validFrom",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -878,41 +947,20 @@
                 },
                 "validTo": {
                     "title": "Doba platnosti",
+                    "transCode": "schema.people.validTo",
                     "type": "string",
                     "required": false,
                     "render": {
                         "component": "psui-datepicker"
-                    }
-                }
-                ,
-                "modifiedOn": {
-                    "title": "Dátum aktualizácie",
-                    "type": "string",
-                    "required": false,
-                    "render": {
-                        "component": "psui-datepicker"
-                    }
-                }
-            }
-        },
-        "futballUserIssf": {
-            "title": "Futbalový user",
-            "type": "object",
-            "properties": {
-                "Club": {
-                    "title": "Klub",
-                    "required": false,
-                    "$objectLink": {
-                        "registry": "organizations",
-                        "name": "baseData.name"
                     }
                 },
-                "association": {
-                    "title": "Zväz",
+                "modifiedOn": {
+                    "title": "Dátum aktualizácie",
+                    "transCode": "schema.people.modifiedOn",
+                    "type": "string",
                     "required": false,
-                    "$objectLink": {
-                        "registry": "organizations",
-                        "name": "baseData.name"
+                    "render": {
+                        "component": "psui-datepicker"
                     }
                 }
             }
@@ -1144,14 +1192,17 @@
         "idInfo": {
             "title": "Registračný preukaz",
             "type": "object",
+            "transCode": "schema.people.idInfo",
             "properties": {
                 "currnetId": {
                     "title": "Aktuálne číslo preukazu člena",
+                    "transCode":"schema.people.idInfo.currnetId",
                     "type": "string",
                     "required": false
                 },
                 "dateOfExpiration": {
                     "title": "Dátum platnosti preukazu",
+                    "transCode":"schema.people.idInfo.dateOfExpiration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -1160,6 +1211,7 @@
                 },
                 "dateOfApplicationForId": {
                     "title": "Dátum začiatku platnosti preukazu",
+                    "transCode":"schema.people.idInfo.dateOfApplicationForId",
                     "type": "string",
                     "required": false,
                     "render": {

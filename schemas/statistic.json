@@ -3,8 +3,7 @@
     "id": "uri://registries/statistic#",
     "new": {
         "table": "people",
-        "title": "Štatista",
-        "xxtransCode": "schema.person.title",
+        "title": "Štatistik",
         "properties": {
             "_security": {
                 "$ref": "uri://registries/people#person/properties/_security"
@@ -30,11 +29,17 @@
         }
     },
     "view": {
-        "$ref": "uri://registries/statistic#new"
+        "table": "people",
+        "title": "Štatistik",
+        "transCode": "schema.people.statistic.view",
+        "properties": {
+	        "$ref": "uri://registries/statistic#new/properties"
+        }
     },
     "search": {
         "table": "people",
-        "title": "štatista",
+        "title": "štatistik",
+        "transCode": "schema.people.statistic.search",
         "listFields": {
             "$ref": "uri://registries/people#person/listFields"
         },

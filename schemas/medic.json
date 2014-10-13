@@ -4,7 +4,6 @@
     "new": {
         "table": "people",
         "title": "Zdravotník",
-        "xxtransCode": "schema.person.title",
         "properties": {
             "_security": {
                 "$ref": "uri://registries/people#person/properties/_security"
@@ -30,11 +29,17 @@
         }
     },
     "view": {
-        "$ref": "uri://registries/medic#new"
+        "table": "people",
+        "title": "Profil zdravotníka",
+        "transCode":"schema.people.medic.view",
+        "properties": {
+	        "$ref": "uri://registries/medic#new/properties"
+        }
     },
     "search": {
         "table": "people",
         "title": "Zdravotník",
+        "transCode":"schema.people.medic.search",
         "listFields": {
             "$ref": "uri://registries/people#person/listFields"
         },
