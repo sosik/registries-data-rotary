@@ -4,10 +4,16 @@
 	"new": {
 		"table" : "stadiums",
 		"title" : "Nový športový objekt",
-		"xxtransCode": "schema.stadium.title",
+		"transCode": "schema.stadium.title",
 		"listFields": [
-			{"field":"baseData.name", "title":"Názov športového objektu"},
-			{"field":"additionalData.overallCapacity", "title":"Celková kapacita"}
+			{
+				"field":"baseData.name", 
+				"title":"Názov športového objektu"
+			},
+			{
+				"field":"additionalData.overallCapacity", 
+				"title":"Celková kapacita"
+			}
 		],
 		"properties":{
 			"_security": {
@@ -28,21 +34,25 @@
 				}
 			},
 			"baseData":{
-				"title": "Základné údaje o športovom objekte",
+				"title": "Základné údaje",
+				"transCode": "schema.stadium.baseData",
 				"type": "object",
 				"properties": {
 					"name": {
 						"title": "Názov športového objektu",
+						"transCode": "schema.stadium.name",
 						"type": "string",
 						"required": true
 					},
 					"street": {
 						"title": "Ulica",
+						"transCode": "schema.stadium.street",
 						"type": "string",
 						"required": false
 					},
 					"houseNumber": {
 						"title": "Číslo domu",
+						"transCode": "schema.stadium.houseNumber",
 						"type": "number",
 						"required": false
 					},
@@ -51,6 +61,7 @@
 					},
 					"postcode": {
 						"title": "PSČ",
+						"transCode": "schema.stadium.postcode",
 						"type": "string",
 						"required": false
 					},
@@ -60,11 +71,13 @@
 				}
 			},
 			"additionalData":{
-				"title": "Doplňujúce údaje o športovom objekte",
+				"title": "Doplňujúce údaje",
+				"transCode": "schema.stadium.additionalData",
 				"type": "object",
 				"properties": {
 					"type": {
 						"title": "Typ športového objektu",
+						"transCode": "schema.stadium.type",
 						"type": "string",
 						"required": false,
 						"enum":[
@@ -84,6 +97,7 @@
 					},
 					"surface": {
 						"title": "Povrch",
+						"transCode": "schema.stadium.surface",
 						"type": "string",
 						"required": false,
 						"enum":[
@@ -101,36 +115,43 @@
 					},
 					"overallCapacity": {
 						"title": "Celková kapacita",
+						"transCode": "schema.stadium.overallCapacity",
 						"type": "number",
 						"required": false
 					},
 					"numberOfSeats": {
 						"title": "Kapacita na sedenie",
+						"transCode": "schema.stadium.numberOfSeats",
 						"type": "number",
 						"required": false
 					},
 					"capacityOfHostSector": {
 						"title": "Kapacita sektoru hostí",
+						"transCode": "schema.stadium.capacityOfHostSector",
 						"type": "number",
 						"required": false
 					},
 					"sizeAndSuface": {
 						"title": "Rozmery a povrch ihriska",
+						"transCode": "schema.stadium.sizeAndSuface",
 						"type": "string",
 						"required": false
 					},
 					"VIPSeats": {
 						"title": "VIP sedadlá",
+						"transCode": "schema.stadium.VIPSeats",
 						"type": "number",
 						"required": false
 					},
 					"Illumination": {
 						"title": "Osvetlenie (lux)",
+						"transCode": "schema.stadium.Illumination",
 						"type": "string",
 						"required": false
 					},
 					"runningFrom": {
 						"title": "V prevádzke od",
+						"transCode": "schema.stadium.runningFrom",
 						"type": "string",
 						"required": false,
 						"render" : {
@@ -139,6 +160,7 @@
 					},
 					"dateOfLastIlluminationRevision": {
 						"title": "Dátum poslednej revízie osvetlenia",
+						"transCode": "schema.stadium.dateOfLastIlluminationRevision",
 						"type": "string",
 						"required": false,
 						"render" : {
@@ -147,6 +169,7 @@
 					},
 					"dateOfLastElectricDeviceRevision": {
 						"title": "Dátum poslednej revízie elektrických zariadení",
+						"transCode": "schema.stadium.dateOfLastElectricDeviceRevision",
 						"type": "string",
 						"required": false,
 						"render" : {
@@ -155,6 +178,7 @@
 					},
 					"dateOfSecurityCertificatePublication": {
 						"title": "Dátum vydania bezpčnostného certifikátu",
+						"transCode": "schema.stadium.dateOfSecurityCertificatePublication",
 						"type": "string",
 						"required": false,
 						"render" : {
@@ -163,16 +187,19 @@
 					},
 					"owner": {
 						"title": "Vlastník",
+						"transCode": "schema.stadium.owner",
 						"type": "string",
 						"required": false
 					},
 					"manager": {
 						"title": "Manažér",
+						"transCode": "schema.stadium.manager",
 						"type": "string",
 						"required": false
 					},
 					"managersContact": {
 						"title": "Kontakt na manažéra",
+						"transCode": "schema.stadium.managersContact",
 						"type": "string",
 						"required": false
 					}
