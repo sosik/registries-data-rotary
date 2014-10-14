@@ -52,21 +52,25 @@
         },
         "club": {
             "title": "Základné údaje",
+            "transCode": "schema.org.club.baseData",
             "type": "object",
             "properties": {
                 "codeOfClub": {
                     "title": "Kód klubu",
+                    "transCode":"schema.org.club.codeOfClub",
                     "type": "string",
                     "required": false,
                     "$sequence": "clubs"
                 },
                 "name": {
                     "title": "Názov klubu",
+                    "transCode": "schema.org.club.name",
                     "type": "string",
                     "required": false
                 },
                 "association": {
                     "title": "Zväz",
+                    "transCode": "schema.org.club.association",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -75,12 +79,13 @@
                 },
                 "ico": {
                     "title": "IČO",
-                    "transCode": "schema.org.ico",
+                    "transCode": "schema.org.club.ico",
                     "type": "string",
                     "required": false
                 },
                 "startDate": {
                     "title": "Dátum založenia",
+                    "transCode": "schema.org.club.startDate",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -89,6 +94,7 @@
                 },
                 "stadium": {
                     "title": "Štadión",
+                    "transCode": "schema.org.club.stadium",
                     "required": false,
                     "$objectLink": {
 						"registry": "stadiums",
@@ -97,6 +103,7 @@
                 },
                 "stateOfClub": {
                     "title": "Stav klubu",
+                    "transCode": "schema.org.club.stateOfClub",
                     "type": "string",
                     "enum": [
                         "aktívny",
@@ -114,6 +121,7 @@
                 },
                 "notPaying": {
                     "title": "Neplatič",
+                    "transCode": "schema.org.club.notPaying",
                     "type": "string",
                     "enum": [
                         "Áno",
@@ -131,6 +139,7 @@
                 },
                 "dateOfRegistration": {
                     "title": "Dátum registrácie",
+                    "transCode": "schema.org.club.dateOfRegistration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -141,25 +150,30 @@
         },
         "clubAdress": {
             "title": "Klub - poštová adresa",
+            "transCode": "schema.org.club.clubAdress",
             "type": "object",
             "properties": {
                 "contactPerson": {
                     "title": "Kontaktná osoba",
+                    "transCode": "schema.org.club.contactPerson",
                     "type": "string",
                     "required": false
                 },
                 "mobileNumberOfContactPerson": {
                     "title": "Telefónne číslo kontaktnej osoby",
+                    "transCode": "schema.org.club.mobileNumberOfContactPerson",
                     "type": "string",
                     "required": false
                 },
                 "street": {
                     "title": "Ulica",
+                    "transCode": "schema.org.club.street",
                     "type": "string",
                     "required": false
                 },
                 "houseNumber": {
                     "title": "Číslo domu",
+                    "transCode": "schema.org.club.houseNumber",
                     "type": "string",
                     "required": false
                 },
@@ -168,11 +182,13 @@
                 },
                 "zipCode": {
                     "title": "PSČ",
+                    "transCode": "schema.org.club.zipCode",
                     "type": "string",
                     "required": false
                 },
                 "region": {
                     "title": "Kraj",
+                    "transCode": "schema.org.club.region",
                     "type": "string",
                     "required": false
                 },
@@ -183,20 +199,24 @@
         },
         "association": {
             "title": "Základné údaje",
+            "transCode": "schema.org.assoc",
             "type": "object",
             "properties": {
                 "associationName": {
                     "title": "Názov zväzu",
+					"transCode": "schema.org.assoc.associationName",
                     "type": "string",
                     "required": false
                 },
                 "shortName": {
                     "title": "Skrátený názov zväzu",
+                    "transCode": "schema.org.assoc.shortName",
                     "type": "string",
                     "required": false
                 },
                 "higherAssociation": {
                     "title": "Nadradený zväz",
+                    "transCode": "schema.org.assoc.higherAssociation",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -205,6 +225,7 @@
                 },
                 "startDate": {
                     "title": "Dátum založenia",
+                    "transCode": "schema.org.assoc.startDate",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -213,6 +234,7 @@
                 },
                 "stateOfAssociation": {
                     "title": "Stav zväzu",
+                    "transCode": "schema.org.assoc.stateOfAssociation",
                     "type": "string",
                     "enum": [
                         "aktívny",
@@ -230,6 +252,7 @@
                 },
                 "notPaying": {
                     "title": "Neplatič",
+                    "transCode": "schema.org.assoc.notPaying",
                     "type": "string",
                     "enum": [
                         "Áno",
@@ -247,6 +270,7 @@
                 },
                 "dateOfRegistration": {
                     "title": "Dátum registrácie",
+                    "transCode": "schema.org.assoc.dateOfRegistration",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -257,25 +281,30 @@
         },
         "associationAdress": {
             "title": "Zväz - poštová adresa",
+            "transCode": "schema.org.assoc.associationAdress",
             "type": "object",
             "properties": {
                 "contactPerson": {
                     "title": "Kontaktná osoba",
+                    "transCode": "schema.org.assoc.contactPerson",
                     "type": "string",
                     "required": false
                 },
                 "mobileNumberOfContactPerson": {
                     "title": "Telefónne číslo kontaktnej osoby",
+                    "transCode": "schema.org.assoc.mobileNumberOfContactPerson",
                     "type": "string",
                     "required": false
                 },
                 "street": {
                     "title": "Ulica",
+                    "transCode": "schema.org.assoc.street",
                     "type": "string",
                     "required": false
                 },
                 "houseNumber": {
                     "title": "Číslo domu",
+                    "transCode": "schema.org.assoc.houseNumber",
                     "type": "string",
                     "required": false
                 },
@@ -284,6 +313,7 @@
                 },
                 "zipCode": {
                     "title": "PSČ",
+                    "transCode": "schema.org.assoc.zipCode",
                     "type": "string",
                     "required": false
                 },

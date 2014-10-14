@@ -4,7 +4,7 @@
 	"new": {
 		"table" : "stadiums",
 		"title" : "Nový športový objekt",
-		"transCode": "schema.stadium.title",
+		"transCode": "schema.stadium.new",
 		"listFields": [
 			{
 				"field":"baseData.name", 
@@ -208,11 +208,20 @@
 		}
 	},
 	"view" : {
-		"$ref" : "uri://registries/stadium#new"
+		"table" : "stadiums",
+		"title" : "Nový športový objekt",
+		"transCode": "schema.stadium.view",
+		"listFields": {
+			"$ref" : "uri://registries/stadium#new/listFields"
+		},
+		"properties": {
+			"$ref" : "uri://registries/stadium#new/properties"
+		}
 	},
 	"search" : {
 		"table": "stadiums",
     	"title": "športový objekt",
+    	"transCode":"schema.stadium.search",
         "listFields": {
             "$ref": "uri://registries/stadium#new/listFields"
         },

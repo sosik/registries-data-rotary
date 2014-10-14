@@ -1,0 +1,122 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "uri://registries/partOfCompetition#",
+    "new": {
+        "title": "Nová časť súťaže",
+        "xxtransCode": "schema.stadium.title",
+        "table": "partOfCompetition",
+        "_security": {
+            "_create": {
+                "_static": [
+                    "Security - write"
+                ]
+            },
+            "_read": {
+                "_static": [
+                    "Security - read"
+                ]
+            },
+            "_modify": {
+                "_static": [
+                    "Security - write"
+                ]
+            }
+        },
+        "listFields": [
+            {
+                "field": "baseData.name",
+                "title": "Názov časti súťaže"
+            },
+            {
+                "field": "baseData.competition.refData.name",
+                "title": "Súťaž"
+            }
+        ],
+        "properties": {
+            "baseData": {
+                "title": "Základné údaje",
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "title": "Názov časti súťaže",
+                        "type": "string",
+                        "required": true
+                    },
+                    "competition": {
+                        "title": "Súťaž",
+                        "type": "object",
+                        "$objectLink": {
+                            "registry": "competitions",
+                            "name": "baseData.name"
+                        },
+                        "required": true
+                    },
+					"numberOfTeams": {
+                        "title": "Počet družstiev",
+                        "type": "integer",
+                        "required": true
+                    },
+                    "numberOfMatches": {
+                        "title": "Počet vzájomných stretnutí",
+                        "type": "integer",
+                        "required": true
+                    },
+                    "typeOfCompetition": {
+                        "title": "Spôsob žrebovania",
+                        "type": "string",
+                        "required": true,
+                        "enum": [
+                        	"Manuálny",
+                        	"Berger"
+                        ],
+	                    "render": {
+	                        "component": "psui-selectbox",
+	                        "searchable": true
+	                    }
+                    }
+                }
+            },
+            "listOfTeam": {
+                "title": "Zoznam družstiev",
+                "type": "object",
+				"render": {
+					"width": "full"
+				},
+                "properties": {
+                    "players": {
+                        "title": "Družstvá",
+                        "type": "array",
+                        "items": {
+                            "$objectLink": {
+                                "registry": "rosters",
+                                "name": "baseData.prName"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "view": {
+        "title": "Detail časti súťaže",
+        "xxtransCode": "schema.stadium.title",
+        "table": "partOfCompetition",
+        "listFields": {
+            "$ref": "uri://registries/partOfCompetition#new/listFields"
+        },
+        "properties": {
+            "$ref": "uri://registries/partOfCompetition#new/properties"
+        }
+    },
+    "search": {
+        "table": "partOfCompetition",
+        "title": "časť súťaže",
+        "xxtransCode": "schema.stadium.title",
+        "listFields": {
+            "$ref": "uri://registries/partOfCompetition#new/listFields"
+        },
+        "properties": {
+            "$ref": "uri://registries/partOfCompetition#new/properties"
+        }
+    }
+}

@@ -3,7 +3,8 @@
     "id": "uri://registries/club#",
     "new": {
         "table": "organizations",
-        "title": "Klub",
+        "title": "Nový klub",
+        "transCode":"schema.club.new",
         "properties": {
             "_security": {
                 "$ref": "uri://registries/organization#properties/_security"
@@ -16,12 +17,19 @@
             },
             "logoInfo": {
                 "$ref": "uri://registries/organization#properties/logoInfo"
+            },
+            "contactInfo": {
+                "$ref": "uri://registries/organization#properties/contactInfo"
+            },
+            "bankInfo": {
+                "$ref": "uri://registries/organization#properties/bankInfo"
             }
         }
     },
     "view": {
         "table": "organizations",
         "title": "Klub",
+        "transCode": "schema.club.view",
         "properties": {
             "_security": {
                 "$ref": "uri://registries/organization#properties/_security"
@@ -46,6 +54,7 @@
     "search": {
         "table": "organizations",
         "title": "Klub",
+        "transCode": "schema.club.search",
         "listFields": [
             {
                 "field": "club.codeOfClub",

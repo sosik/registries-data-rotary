@@ -86,16 +86,6 @@
                         "title": "Úroveň súťaže",
                         "type": "integer",
                         "required": true
-                    },
-                    "numberOfTeams": {
-                        "title": "Počet družstiev",
-                        "type": "integer",
-                        "required": true
-                    },
-                    "numberOfMatches": {
-                        "title": "Počet vzájomných stretnutí",
-                        "type": "integer",
-                        "required": true
                     }
                 }
             }
