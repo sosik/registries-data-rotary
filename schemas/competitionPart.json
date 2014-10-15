@@ -1,10 +1,10 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "id": "uri://registries/partOfCompetition#",
+    "id": "uri://registries/competitionPart#",
     "new": {
         "title": "Nová časť súťaže",
         "xxtransCode": "schema.stadium.title",
-        "table": "partOfCompetition",
+        "table": "CompetitionParts",
         "_security": {
             "_create": {
                 "_static": [
@@ -100,23 +100,23 @@
     "view": {
         "title": "Detail časti súťaže",
         "xxtransCode": "schema.stadium.title",
-        "table": "partOfCompetition",
+        "table": "CompetitionParts",
         "listFields": {
-            "$ref": "uri://registries/partOfCompetition#new/listFields"
+            "$ref": "uri://registries/competitionPart#new/listFields"
         },
-        "properties": {
-            "$ref": "uri://registries/partOfCompetition#new/properties"
+		"properties": {
+            "$ref": "uri://registries/competitionPart#new/properties"
         }
     },
     "search": {
-        "table": "partOfCompetition",
         "title": "časť súťaže",
         "xxtransCode": "schema.stadium.title",
+        "table": "CompetitionParts",
         "listFields": {
-            "$ref": "uri://registries/partOfCompetition#new/listFields"
+            "$ref": "uri://registries/competitionPart#new/listFields"
         },
         "properties": {
-            "$ref": "uri://registries/partOfCompetition#new/properties"
+            "$ref": "uri://registries/competitionPart#new/properties"
         }
     }
 }

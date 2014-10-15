@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "uri://registries/schedule#",
+    "new": {
+        "title": "Nový termín",
+        "xxtransCode": "schema.stadium.title",
+        "table": "schedules",
+        "_security": {
+            "_create": {
+                "_static": [
+                    "Security - write"
+                ]
+            },
+            "_read": {
+                "_static": [
+                    "Security - read"
+                ]
+            },
+            "_modify": {
+                "_static": [
+                    "Security - write"
+                ]
+            }
+        },
+        "listFields": [
+            {
+                "field": "baseData.name",
+                "title": "Názov termínu"
+            },
+            {
+                "field": "baseData.competition.refData.name",
+                "title": "Názov časti súťaže"
+            }
+        ],
+        "properties": {
+            "baseData": {
+                "title": "Základné údaje",
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "title": "Názov",
+	                    "type": "string",
+	                    "required": true
+	                },
+                    "competition": {
+                        "title": "Vyberte časť súťaže",
+                        "type": "string",
+                        "required": true,
+                        "$objectLink": {
+                            "registry": "CompetitionParts",
+                            "name": "baseData.name",
+                            "surName": "baseData.competition.refData.name"
+                        }
+                    },
+                    "date": {
+                        "title": "Dátum",
+	                    "type": "string",
+	                    "required": true,
+	                    "render": {
+	                        "component": "psui-datepicker"
+	                    }
+	                }
+                }
+            }
+        }
+    },
+    "view": {
+        "title": "Detail termínu stretnutia",
+        "xxtransCode": "schema.stadium.title",
+        "table": "schedules",
+        "listFields": {
+            "$ref": "uri://registries/schedule#new/listFields"
+        },
+		"properties": {
+            "$ref": "uri://registries/schedule#new/properties"
+        }
+    },
+    "search": {
+        "title": "Termín",
+        "xxtransCode": "schema.stadium.title",
+        "table": "schedules",
+        "listFields": {
+            "$ref": "uri://registries/schedule#new/listFields"
+        },
+        "properties": {
+            "$ref": "uri://registries/schedule#new/properties"
+        }
+    }
+}

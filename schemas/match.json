@@ -1,0 +1,149 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "uri://registries/match#",
+    "new": {
+        "title": "Nové stretnutie",
+        "xxtransCode": "schema.stadium.title",
+        "table": "matches",
+        "_security": {
+            "_create": {
+                "_static": [
+                    "Security - write"
+                ]
+            },
+            "_read": {
+                "_static": [
+                    "Security - read"
+                ]
+            },
+            "_modify": {
+                "_static": [
+                    "Security - write"
+                ]
+            }
+        },
+        "listFields": [
+            {
+                "field": "baseData.homeClub.refData.name",
+                "title": "Domáce družstvo"
+            },
+            {
+                "field": "baseData.awayClub.refData.name",
+                "title": "Hosťujúce družstvo"
+            },
+            {
+                "field": "baseData.matchDate.refData.name",
+                "title": "Termín"
+            }
+        ],
+        "properties": {
+            "baseData": {
+                "title": "Základné údaje",
+                "type": "object",
+                "properties": {
+                    "homeClub": {
+                        "title": "Domáce družstvo",
+                        "type": "object",
+                        "required": true,
+                        "$objectLink": {
+                            "registry": "rosters",
+                            "name": "baseData.prName"
+                        }
+                    },
+                    "awayClub": {
+                        "title": "Hosťujúce družstvo",
+                        "type": "object",
+                        "required": true,
+                        "$objectLink": {
+                            "registry": "rosters",
+                            "name": "baseData.prName"
+                        }
+                    },
+                    "matchDate": {
+                        "title": "Termín stretnutia",
+                        "type": "object",
+                        "required": true,
+                        "$objectLink": {
+                            "registry": "schedules",
+                            "name": "baseData.name"
+                        }
+                    },
+                    "halfTimeStatus": {
+                        "title": "Polčasový stav (D:H)",
+                        "type": "string",
+                        "required": false
+                    },
+                    "fullTimeStatus": {
+                        "title": "Výsledok (D:H)",
+                        "type": "string",
+                        "required": false
+                    },
+                    "matchBegin": {
+                        "title": "Začiatok stretnutia",
+                        "type": "string",
+                        "required": true
+                    },
+                    "attendance": {
+                        "title": "Návštevnosť",
+                        "type": "string",
+                        "required": false
+                    },
+                    "stadium": {
+                        "title": "Štadion",
+                        "type": "object",
+                        "required": true,
+                        "$objectLink": {
+                            "registry": "stadiums",
+                            "name": "baseData.name"
+                        }
+                    }
+                }
+            },
+            "delegatedPerson": {
+                "title": "Delegované osoby",
+                "type": "object",
+                "properties": {
+	                "referee": {
+		                "title": "Rozhodca",
+                        "type": "object",
+                        "required": true,
+                        "$objectLink": {
+                            "registry": "people",
+                            "surName": "baseData.surName",
+                            "firstName": "baseData.name"
+                        },
+                        "$objectLinkForcedCriteria": [
+                            {
+                                "f": "referee.isReferee",
+                                "op": "eq",
+                                "v": "Áno"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "view": {
+        "title": "Detail stretnutia",
+        "xxtransCode": "schema.stadium.title",
+        "table": "matches",
+        "listFields": {
+            "$ref": "uri://registries/match#new/listFields"
+        },
+		"properties": {
+            "$ref": "uri://registries/match#new/properties"
+        }
+    },
+    "search": {
+        "title": "stretnutie",
+        "xxtransCode": "schema.stadium.title",
+        "table": "matches",
+        "listFields": {
+            "$ref": "uri://registries/match#new/listFields"
+        },
+        "properties": {
+            "$ref": "uri://registries/match#new/properties"
+        }
+    }
+}

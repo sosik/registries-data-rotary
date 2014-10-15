@@ -31,5 +31,7 @@
 	"statistic.json",
 	"fees.json",
 	"events.json",
-	"partOfCompetition.json"
+	"competitionPart.json",
+	"schedule.json",
+	"match.json"
 ]
