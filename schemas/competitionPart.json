@@ -4,7 +4,7 @@
     "new": {
         "title": "Nová časť súťaže",
         "xxtransCode": "schema.stadium.title",
-        "table": "CompetitionParts",
+        "table": "competitionParts",
         "_security": {
             "_create": {
                 "_static": [
@@ -100,7 +100,7 @@
     "view": {
         "title": "Detail časti súťaže",
         "xxtransCode": "schema.stadium.title",
-        "table": "CompetitionParts",
+        "table": "competitionParts",
         "listFields": {
             "$ref": "uri://registries/competitionPart#new/listFields"
         },
@@ -111,7 +111,7 @@
     "search": {
         "title": "časť súťaže",
         "xxtransCode": "schema.stadium.title",
-        "table": "CompetitionParts",
+        "table": "competitionParts",
         "listFields": {
             "$ref": "uri://registries/competitionPart#new/listFields"
         },

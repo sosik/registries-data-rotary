@@ -121,6 +121,256 @@
                         ]
                     }
                 }
+            },
+	    	"officersHome": {
+	            "title": "Funkcionári domáceho družstva",
+	            "type": "object",
+				"render": {
+					"width": "full"
+				},
+	            "properties": {
+	                "coach": {
+	                    "title": "Tréner",
+	                    "type": "object",
+	                    "$objectLink": {
+	                        "registry": "people",
+	                        "surName": "baseData.surName",
+	                        "firstName": "baseData.name",
+	                        "license": "coach.coachLicense",
+	                        "licenseType": "coach.coachLicenseType"
+	                    },
+	                    "$objectLinkForcedCriteria": [
+	                        {
+	                            "f": "coach.isCoach",
+	                            "op": "eq",
+	                            "v": "Áno"
+	                        }
+	                    ]
+	                },
+	                "aCoach1": {
+	                    "title": "Asistent Trénera",
+	                    "type": "object",
+	                    "$objectLink": {
+	                        "registry": "people",
+	                        "surName": "baseData.surName",
+	                        "firstName": "baseData.name",
+	                        "license": "coach.coachLicense",
+	                        "licenseType": "coach.coachLicenseType"
+	                    },
+	                    "$objectLinkForcedCriteria": [
+	                        {
+	                            "f": "coach.isCoach",
+	                            "op": "eq",
+	                            "v": "Áno"
+	                        }
+	                    ]
+	                },
+	                "aCoach2": {
+	                    "title": "Asistent Trénera",
+	                    "type": "object",
+	                    "$objectLink": {
+	                        "registry": "people",
+	                        "surName": "baseData.surName",
+	                        "firstName": "baseData.name",
+	                        "license": "coach.coachLicense",
+	                        "licenseType": "coach.coachLicenseType"
+	                    },
+	                    "$objectLinkForcedCriteria": [
+	                        {
+	                            "f": "coach.isCoach",
+	                            "op": "eq",
+	                            "v": "Áno"
+	                        }
+	                    ]
+	                },
+	                "statistic": {
+	                    "title": "Štatistik",
+	                    "type": "object",
+	                    "$objectLink": {
+	                        "registry": "people",
+	                        "surName": "baseData.surName",
+	                        "firstName": "baseData.name"
+	                    },
+	                    "$objectLinkForcedCriteria": [
+	                        {
+	                            "f": "statistic.isStatistic",
+	                            "op": "eq",
+	                            "v": "Áno"
+	                        }
+	                    ]
+	                },
+	                "medic": {
+	                    "title": "Zdravotník",
+	                    "type": "object",
+	                    "$objectLink": {
+	                        "registry": "people",
+	                        "surName": "baseData.surName",
+	                        "firstName": "baseData.name"
+	                    },
+	                    "$objectLinkForcedCriteria": [
+	                        {
+	                            "f": "medic.isMedic",
+	                            "op": "eq",
+	                            "v": "Áno"
+	                        }
+	                    ]
+	                }
+                }
+            },
+            "listOfPlayers": {
+                "title": "Nominácia domácich",
+                "type": "object",
+				"render": {
+					"width": "full"
+				},
+                "properties": {
+                    "players": {
+                        "title": "Hráči",
+                        "type": "array",
+                        "items": {
+                            "$objectLink": {
+                                "registry": "people",
+                                "surName": "baseData.surName",
+                                "firstName": "baseData.name",
+                                "birthDate": "baseData.birthDate",
+                                "playerLicense": "player.playerLicense"
+                            },
+                            "required": true,
+                            "$objectLinkForcedCriteria": [
+                                {
+                                    "f": "player.isPlayer",
+                                    "op": "eq",
+                                    "v": "Áno"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+	    	"officersHome": {
+	            "title": "Funkcionári hosťujúceho družstva",
+	            "type": "object",
+				"render": {
+					"width": "full"
+				},
+	            "properties": {
+	                "coach": {
+	                    "title": "Tréner",
+	                    "type": "object",
+	                    "$objectLink": {
+	                        "registry": "people",
+	                        "surName": "baseData.surName",
+	                        "firstName": "baseData.name",
+	                        "license": "coach.coachLicense",
+	                        "licenseType": "coach.coachLicenseType"
+	                    },
+	                    "$objectLinkForcedCriteria": [
+	                        {
+	                            "f": "coach.isCoach",
+	                            "op": "eq",
+	                            "v": "Áno"
+	                        }
+	                    ]
+	                },
+	                "aCoach1": {
+	                    "title": "Asistent Trénera",
+	                    "type": "object",
+	                    "$objectLink": {
+	                        "registry": "people",
+	                        "surName": "baseData.surName",
+	                        "firstName": "baseData.name",
+	                        "license": "coach.coachLicense",
+	                        "licenseType": "coach.coachLicenseType"
+	                    },
+	                    "$objectLinkForcedCriteria": [
+	                        {
+	                            "f": "coach.isCoach",
+	                            "op": "eq",
+	                            "v": "Áno"
+	                        }
+	                    ]
+	                },
+	                "aCoach2": {
+	                    "title": "Asistent Trénera",
+	                    "type": "object",
+	                    "$objectLink": {
+	                        "registry": "people",
+	                        "surName": "baseData.surName",
+	                        "firstName": "baseData.name",
+	                        "license": "coach.coachLicense",
+	                        "licenseType": "coach.coachLicenseType"
+	                    },
+	                    "$objectLinkForcedCriteria": [
+	                        {
+	                            "f": "coach.isCoach",
+	                            "op": "eq",
+	                            "v": "Áno"
+	                        }
+	                    ]
+	                },
+	                "statistic": {
+	                    "title": "Štatistik",
+	                    "type": "object",
+	                    "$objectLink": {
+	                        "registry": "people",
+	                        "surName": "baseData.surName",
+	                        "firstName": "baseData.name"
+	                    },
+	                    "$objectLinkForcedCriteria": [
+	                        {
+	                            "f": "statistic.isStatistic",
+	                            "op": "eq",
+	                            "v": "Áno"
+	                        }
+	                    ]
+	                },
+	                "medic": {
+	                    "title": "Zdravotník",
+	                    "type": "object",
+	                    "$objectLink": {
+	                        "registry": "people",
+	                        "surName": "baseData.surName",
+	                        "firstName": "baseData.name"
+	                    },
+	                    "$objectLinkForcedCriteria": [
+	                        {
+	                            "f": "medic.isMedic",
+	                            "op": "eq",
+	                            "v": "Áno"
+	                        }
+	                    ]
+	                }
+	            }
+            },
+            "listOfPlayers": {
+                "title": "Nominácia hostí",
+                "type": "object",
+				"render": {
+					"width": "full"
+				},
+                "properties": {
+                    "players": {
+                        "title": "Hráči",
+                        "type": "array",
+                        "items": {
+                            "$objectLink": {
+                                "registry": "people",
+                                "surName": "baseData.surName",
+                                "firstName": "baseData.name",
+                                "birthDate": "baseData.birthDate",
+                                "playerLicense": "player.playerLicense"
+                            },
+                            "required": true,
+                            "$objectLinkForcedCriteria": [
+                                {
+                                    "f": "player.isPlayer",
+                                    "op": "eq",
+                                    "v": "Áno"
+                                }
+                            ]
+                        }
+                    }
+                }
             }
         }
     },

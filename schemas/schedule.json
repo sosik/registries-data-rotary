@@ -28,8 +28,12 @@
                 "title": "Názov termínu"
             },
             {
-                "field": "baseData.competition.refData.name",
+                "field": "baseData.competitionPart.refData.name",
                 "title": "Názov časti súťaže"
+            },
+            {
+                "field": "baseData",
+                "title": "Súťaž"
             }
         ],
         "properties": {
@@ -42,12 +46,12 @@
 	                    "type": "string",
 	                    "required": true
 	                },
-                    "competition": {
+                    "competitionPart": {
                         "title": "Vyberte časť súťaže",
                         "type": "string",
                         "required": true,
                         "$objectLink": {
-                            "registry": "CompetitionParts",
+                            "registry": "competitionParts",
                             "name": "baseData.name",
                             "surName": "baseData.competition.refData.name"
                         }
