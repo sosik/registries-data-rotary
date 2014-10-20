@@ -33,5 +33,6 @@
 	"events.json",
 	"competitionPart.json",
 	"schedule.json",
-	"match.json"
+	"match.json",
+	"delegateReport.json"
 ]

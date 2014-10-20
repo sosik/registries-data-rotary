@@ -119,6 +119,57 @@
                                 "v": "Áno"
                             }
                         ]
+                    },
+	                "aReferee1": {
+		                "title": "Asistent rozhodcu",
+                        "type": "object",
+                        "required": false,
+                        "$objectLink": {
+                            "registry": "people",
+                            "surName": "baseData.surName",
+                            "firstName": "baseData.name"
+                        },
+                        "$objectLinkForcedCriteria": [
+                            {
+                                "f": "referee.isReferee",
+                                "op": "eq",
+                                "v": "Áno"
+                            }
+                        ]
+                    },
+	                "aReferee2": {
+		                "title": "Asistent rozhodcu",
+                        "type": "object",
+                        "required": false,
+                        "$objectLink": {
+                            "registry": "people",
+                            "surName": "baseData.surName",
+                            "firstName": "baseData.name"
+                        },
+                        "$objectLinkForcedCriteria": [
+                            {
+                                "f": "referee.isReferee",
+                                "op": "eq",
+                                "v": "Áno"
+                            }
+                        ]
+                    },
+	                "delegate": {
+		                "title": "Delegát",
+                        "type": "object",
+                        "required": false,
+                        "$objectLink": {
+                            "registry": "people",
+                            "surName": "baseData.surName",
+                            "firstName": "baseData.name"
+                        },
+                        "$objectLinkForcedCriteria": [
+                            {
+                                "f": "referee.isReferee",
+                                "op": "eq",
+                                "v": "Áno"
+                            }
+                        ]
                     }
                 }
             },
@@ -217,7 +268,7 @@
 	                }
                 }
             },
-            "listOfPlayers": {
+            "listOfHomePlayers": {
                 "title": "Nominácia domácich",
                 "type": "object",
 				"render": {
@@ -247,7 +298,7 @@
                     }
                 }
             },
-	    	"officersHome": {
+	    	"officersAway": {
 	            "title": "Funkcionári hosťujúceho družstva",
 	            "type": "object",
 				"render": {
@@ -342,7 +393,7 @@
 	                }
 	            }
             },
-            "listOfPlayers": {
+            "listOfAwayPlayers": {
                 "title": "Nominácia hostí",
                 "type": "object",
 				"render": {
@@ -370,6 +421,69 @@
                             ]
                         }
                     }
+                }
+            },
+            "additionalInfoHome":{
+                "title": "Doplňujúce informácie domáci",
+                "type": "object",
+                "properties": {
+	                "approvalHome": {
+	                    "title": "Súhlas vedúceho",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "objectionsHome": {
+	                    "title": "Námietky",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                }
+                }
+            },
+            "additionalInfoAway":{
+                "title": "Doplňujúce informácie hostia",
+                "type": "object",
+                "properties": {
+	                "approvalAway": {
+	                    "title": "Súhlas vedúceho",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "objectionsAway": {
+	                    "title": "Námietky",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                }
+                }
+            },
+            "refereeReport":{
+                "title": "Správa rozhodcu",
+                "type": "object",
+                "properties": {
+	                "note": {
+	                    "title": "Popis",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "state": {
+	                    "title": "Stav",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": true,
+	                    "enum": [
+	                    	"Otvorený",
+	                    	"Schválený",
+	                    	"Zatvorený"
+	                    ],
+	                    "render": {
+	                        "component": "psui-selectbox",
+	                        "searchable": true
+	                    }
+	                }
                 }
             }
         }

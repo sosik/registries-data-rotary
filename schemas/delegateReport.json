@@ -1,0 +1,181 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "uri://registries/delegateReport#",
+    "new": {
+        "title": "Správa delegáta",
+        "xxtransCode": "schema.stadium.title",
+        "table": "delegateReports",
+        "_security": {
+            "_create": {
+                "_static": [
+                    "Security - write"
+                ]
+            },
+            "_read": {
+                "_static": [
+                    "Security - read"
+                ]
+            },
+            "_modify": {
+                "_static": [
+                    "Security - write"
+                ]
+            }
+        },
+        "listFields": [
+            {
+                "field": "baseData.match",
+                "title": "Stretnutie"
+            }
+        ],
+        "properties": {
+            "baseData": {
+                "title": "Základné údaje",
+                "type": "object",
+				"render": {
+					"width": "full"
+				},
+                "properties": {
+                    "match": {
+                        "title": "Stretnutie",
+                        "type": "object",
+                        "required": true,
+                        "$objectLink": {
+                            "registry": "matches",
+                            "stadium": "baseData.stadium.refData.name",
+                            "home": "baseData.homeClub.refData.name",
+                            "away": "baseData.awayClub.refData.name"
+                        }
+                    }
+                }
+            },
+            "matchInformation":{
+                "title": "Údaje o stretnutí",
+                "type": "object",
+				"render": {
+					"width": "full"
+				},
+                "properties": {
+	                "information1": {
+	                    "title": "Dôvod oneskorenia",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "information2": {
+	                    "title": "Dôvod nadstavenia",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "information3": {
+	                    "title": "Striedania D",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "information4": {
+	                    "title": "Striedania H",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "information5": {
+	                    "title": "Napomínaní a vylúčení hráči",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "information6": {
+	                    "title": "Strelci gólov",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                }
+                }
+            },
+            "controlInformation":{
+                "title": "Kontrolné informácie z PRED a POČAS stretnutia",
+                "type": "object",
+				"render": {
+					"width": "full"
+				},
+                "properties": {
+	                "information7": {
+	                    "title": "Príprava stretnutia",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "information8": {
+	                    "title": "Pripravenosť porady pred stretnutím",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "information9": {
+	                    "title": "Stav hracej plochy",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "information10": {
+	                    "title": "Stav pripravenosti štadiónu",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "information11": {
+	                    "title": "Bezpečnostné opatrenia",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                },
+	                "information12": {
+	                    "title": "Zdravotné zabezpečenie stretnutia",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                }
+                }
+            },
+            "afterMatch":{
+                "title": "Vyhodnotenie po stretnutí",
+                "type": "object",
+				"render": {
+					"width": "full"
+				},
+                "properties": {
+	                "information13": {
+	                    "title": "Vyhodnotenie výkonu rozhodcov",
+	                    "xxtransCode": "schema.people.title.after",
+	                    "type": "string",
+	                    "required": false
+	                }
+                }
+			}
+        }
+    },
+    "view": {
+        "title": "Správa delegáta",
+        "xxtransCode": "schema.stadium.title",
+        "table": "delegateReports",
+        "listFields": {
+            "$ref": "uri://registries/delegateReport#new/listFields"
+        },
+		"properties": {
+            "$ref": "uri://registries/delegateReport#new/properties"
+        }
+    },
+    "search": {
+        "title": "Správa delegáta",
+        "xxtransCode": "schema.stadium.title",
+        "table": "delegateReports",
+        "listFields": {
+            "$ref": "uri://registries/delegateReport#new/listFields"
+        },
+        "properties": {
+            "$ref": "uri://registries/delegateReport#new/properties"
+        }
+    }
+}

@@ -32,7 +32,7 @@
                 "title": "Názov časti súťaže"
             },
             {
-                "field": "baseData",
+                "field": "baseData.competitionPart.refData.name",
                 "title": "Súťaž"
             }
         ],
