@@ -208,7 +208,7 @@
         "table": "transfers",
         "_security": {
 	        "$ref": "uri://registries/transfer#new/_security"
-        }
+        },
         "properties": {
 	        "$ref": "uri://registries/transfer#new/properties"
         }
