@@ -2,8 +2,9 @@
     "$schema": "http://json-schema.org/schema#",
     "id": "uri://registries/association#",
     "new": {
+        "title": "Nový zväz",
+        "transCode":"schema.association.new",
         "table": "organizations",
-        "title": "Zväz",
         "properties": {
             "_security": {
                 "$ref": "uri://registries/organization#properties/_security"
@@ -26,11 +27,17 @@
         }
     },
     "view": {
-        "$ref": "uri://registries/association#new"
+        "title": "Profil zväzu",
+        "transCode":"schema.association.view",
+        "table": "organizations",
+        "properties": {
+	        "$ref": "uri://registries/association#new/properties"
+        }
     },
     "search": {
+        "title": "Zväz",
+        "transCode":"schema.association.search",
         "table": "organizations",
-        "title": "Zväzy",
         "listFields": [
             {
                 "field": "association.associationName",

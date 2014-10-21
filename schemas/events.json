@@ -3,7 +3,7 @@
 	"id": "uri://registries/events#",
 	"new": {
         "title": "Nová udalosť",
-		"xxtransCode":"schema.org.new",
+		"transCode":"schema.event.new",
         "table": "events",
         "_security": {
 			"_create": {
@@ -20,30 +20,31 @@
         "properties": {
             "baseData": {
                 "title": "Základné údaje",
+                "transCode": "schema.event.baseData",
 				"type": "object",
 				"properties": {
 					"name": {
 						"title": "Názov udalosti",
-						"xxtransCode": "schema.org.baseData.name",
+						"transCode": "schema.event.title",
 						"type": "string",
 						"required": true
 					},
 					"details": {
 						"title": "Detaily",
-						"xxtransCode": "schema.org.baseData.name",
+						"transCode": "schema.event.details",
 						"type": "string",
 						"required": true,
 						"large":"true"
 					},
 					"place": {
 						"title": "Miesto udalosti",
-						"xxtransCode": "schema.org.baseData.name",
+						"transCode": "schema.event.place",
 						"type": "string",
 						"required": true
 					},
 					"time": {
 						"title": "Čas udalosti",
-						"xxtransCode": "schema.org.baseData.name",
+						"transCode": "schema.event.time",
 						"type": "string",
 						"required": true,
 						"render": {
@@ -52,7 +53,7 @@
 					},
 					"end": {
 						"title": "Čas ukončenia",
-						"xxtransCode": "schema.org.baseData.name",
+						"transCode": "schema.event.end",
 						"type": "string",
 						"required": true,
 						"render": {
@@ -61,7 +62,7 @@
 					},
 					"organizator": {
 						"title": "Organizátor",
-						"xxtransCode": "schema.org.baseData.name",
+						"transCode": "schema.event.organizator",
 						"required": false,
 						"$objectLink": {
 							"registry": "organizations",
@@ -70,7 +71,7 @@
 					},
 					"sponzor": {
 						"title": "Sponzor",
-						"xxtransCode": "schema.org.baseData.name",
+						"transCode": "schema.event.sponzor",
 						"required": false,
 						"$objectLink": {
 							"registry": "organizations",
@@ -79,7 +80,7 @@
 					},
 					"ticketCost": {
 						"title": "Vstupné",
-						"xxtransCode": "schema.org.baseData.name",
+						"transCode": "schema.event.ticketCost",
 						"type": "string",
 						"required": true
 					}
@@ -89,7 +90,7 @@
 	},
 	"view": {
         "title": "Udalosť",
-		"xxtransCode":"schema.org.view",
+		"transCode":"schema.event.view",
         "table": "events",
         "_security": {
 			"_create": {
@@ -107,6 +108,8 @@
 		}
 	},
 	"search": {
+        "title": "Udalosť",
+		"transCode":"schema.event.search",
 		"table": "events",
 		"_security": {
 			"_create": {
@@ -119,8 +122,6 @@
 				"_static":["Registry - write"]
 			}
 		},
-        "title": "Udalosť",
-		"xxtransCode":"schema.org.view",
         "listFields": [
             {"field":"baseData.name", "title":"Meno", "xxtransCode":"schema.org.listFields.name"},
 			{"field":"baseData.start", "title":"Dátum začiatka", "xxtransCode":"schema.org.listFields.name"}

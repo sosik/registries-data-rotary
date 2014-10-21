@@ -389,13 +389,13 @@
                 },
                 "fax": {
                     "title": "FAX",
-                    "xxtransCode": "schema.org.email",
+                    "transCode": "schema.org.fax",
                     "type": "string",
                     "required": false
                 },
                 "webPage": {
                     "title": "Webová stránka",
-                    "xxtransCode": "schema.org.email",
+                    "transCode": "schema.org.webPage",
                     "type": "string",
                     "required": false
                 }
@@ -479,7 +479,7 @@
                     "required": true
                 },
                 "city": {
-                    "$ref": "uri://registries/towns_required#town"
+                    "$ref": "uri://registries/towns#town"
                 },
                 "zipCode": {
                     "title": "PSČ",

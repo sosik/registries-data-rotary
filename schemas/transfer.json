@@ -2,9 +2,26 @@
     "$schema": "http://json-schema.org/schema#",
     "id": "uri://registries/transfer#",
     "new": {
-        "table": "transfers",
         "title": "Nová Zmena kl. príslušnosti",
-        "xxtransCode": "schema.transfer.title",
+        "transCode": "schema.transfer.new",
+        "table": "transfers",
+        "_security": {
+            "_create": {
+                "_static": [
+                    "Security - write"
+                ]
+            },
+            "_read": {
+                "_static": [
+                    "Security - read"
+                ]
+            },
+            "_modify": {
+                "_static": [
+                    "Security - write"
+                ]
+            }
+        },
         "listFields": [
             {
                 "field": "baseData.player.refData.name",
@@ -24,34 +41,20 @@
             }
         ],
         "properties": {
-            "_security": {
-                "_create": {
-                    "_static": [
-                        "Security - write"
-                    ]
-                },
-                "_read": {
-                    "_static": [
-                        "Security - read"
-                    ]
-                },
-                "_modify": {
-                    "_static": [
-                        "Security - write"
-                    ]
-                }
-            },
             "baseData": {
                 "title": "Základné údaje",
+                "transCode": "schema.transfer.baseData",
                 "type": "object",
                 "properties": {
                     "id": {
                         "title": "ID",
+		                "transCode": "schema.transfer.id",
                         "type": "string",
                         "required": true
                     },
                     "player": {
                         "title": "Hráč",
+		                "transCode": "schema.transfer.player",
                         "type": "string",
                         "required": true,
                         "$objectLink": {
@@ -63,6 +66,7 @@
                     },
                     "clubFrom": {
                         "title": "Z klubu",
+                        "transCode": "schema.transfer.clubFrom",
                         "type": "string",
                         "required": true,
                         "$objectLink": {
@@ -72,6 +76,7 @@
                     },
                     "clubTo": {
                         "title": "Do klubu",
+                        "transCode": "schema.transfer.clubTo",
                         "type": "string",
                         "required": true,
                         "$objectLink": {
@@ -81,6 +86,7 @@
                     },
                     "season": {
                         "title": "Súťažný ročnik",
+                        "transCode": "schema.transfer.season",
                         "$objectLink": {
                             "registry": "seasons",
                             "name": "baseData.name"
@@ -89,6 +95,7 @@
                     },
                     "typeOfTransfer": {
                         "title": "Typ zmeny",
+                        "transCode": "schema.transfer.typeOfTransfer",
                         "type": "string",
                         "required": true,
                         "enum": [
@@ -110,6 +117,7 @@
                     },
                     "dateOfRealization": {
                         "title": "Dátum realizácie",
+                        "transCode": "schema.transfer.dateOfRealization",
                         "type": "string",
                         "required": true,
                         "render": {
@@ -118,6 +126,7 @@
                     },
                     "dateFrom": {
                         "title": "Začiatok hosťovania",
+                        "transCode": "schema.transfer.dateFrom",
                         "type": "string",
                         "required": false,
                         "render": {
@@ -126,6 +135,7 @@
                     },
                     "dateTo": {
                         "title": "Koniec hosťovania",
+                        "transCode": "schema.transfer.dateTo",
                         "type": "string",
                         "required": false,
                         "render": {
@@ -134,6 +144,7 @@
                     },
                     "deliveredOn": {
                         "title": "Dátum doručenia",
+                        "transCode": "schema.transfer.deliveredOn",
                         "type": "string",
                         "required": false,
                         "render": {
@@ -142,6 +153,7 @@
                     },
                     "stateOfTransfer": {
                         "title": "Stav",
+                        "transCode": "schema.transfer.stateOfTransfer",
                         "type": "string",
                         "required": true,
                         "enum": [
@@ -163,6 +175,7 @@
                     },
                     "active": {
                         "title": "Aktívny",
+                        "transCode": "schema.transfer.active",
                         "type": "string",
                         "required": true,
                         "enum": [
@@ -180,6 +193,7 @@
                     },
                     "note": {
                         "title": "Poznámka",
+                        "transCode": "schema.transfer.note",
                         "type": "string",
                         "required": false,
                         "large": true
@@ -189,18 +203,25 @@
         }
     },
     "view": {
-        "$ref": "uri://registries/transfer#new"
+        "title": "Nová Zmena kl. príslušnosti",
+        "transCode": "schema.transfer.view",
+        "table": "transfers",
+        "_security": {
+	        "$ref": "uri://registries/transfer#new/_security"
+        }
+        "properties": {
+	        "$ref": "uri://registries/transfer#new/properties"
+        }
     },
     "search": {
-        "table": "transfers",
         "title": "Zmena kl. príslušnosti",
+        "transCode": "schema.transfer.search",
+        "table": "transfers",
         "listFields": {
             "$ref": "uri://registries/transfer#new/listFields"
         },
         "properties": {
-            "baseData": {
-                "$ref": "uri://registries/transfer#new/properties/baseData"
-            }
+            "$ref": "uri://registries/transfer#new/properties"
         }
     }
 }
