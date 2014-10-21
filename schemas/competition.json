@@ -2,6 +2,8 @@
     "$schema": "http://json-schema.org/schema#",
     "id": "uri://registries/competition#",
     "new": {
+        "title": "Nová súťaž",
+        "transCode": "schema.competition.new",
         "table": "competitions",
         "_security": {
             "_create": {
@@ -20,8 +22,6 @@
                 ]
             }
         },
-        "title": "Nová súťaž",
-        "xxtransCode": "schema.stadium.title",
         "listFields": [
             {
                 "field": "baseData.name",
@@ -31,15 +31,18 @@
         "properties": {
             "baseData": {
                 "title": "Základné údaje",
+                "transCode": "schema.competition.baseData",
                 "type": "object",
                 "properties": {
                     "name": {
                         "title": "Názov súťaže",
+                        "transCode": "schema.competition.name",
                         "type": "string",
                         "required": true
                     },
                     "season": {
                         "title": "Súťažný ročnik",
+                        "transCode": "schema.competition.season",
                         "$objectLink": {
                             "registry": "seasons",
                             "name": "baseData.name"
@@ -48,6 +51,7 @@
                     },
                     "association": {
                         "title": "Zväz",
+                        "transCode": "schema.competition.association",
                         "type": "object",
                         "$objectLink": {
                             "registry": "organizations",
@@ -57,6 +61,7 @@
                     },
                     "ageCategory": {
                         "title": "Veková kategória",
+                        "transCode": "schema.competition.ageCategory",
                         "type": "object",
                         "$objectLink": {
                             "registry": "ageCategories",
@@ -84,6 +89,7 @@
 	                },
                     "competitionLevel": {
                         "title": "Úroveň súťaže",
+                        "transCode": "schema.competition.competitionLevel",
                         "type": "integer",
                         "required": true
                     }
@@ -93,7 +99,7 @@
     },
     "view": {
         "title": "Detail súťaže",
-        "xxtransCode": "schema.stadium.title",
+        "transCode": "schema.competition.view",
         "table": "competitions",
         "listFields": {
             "$ref": "uri://registries/competition#new/listFields"
@@ -105,15 +111,14 @@
         }
     },
     "search": {
+    	"title": "súťaž",
+    	"transCode": "schema.competition.search",
         "table": "competitions",
-        "title": "súťaž",
         "listFields": {
             "$ref": "uri://registries/competition#new/listFields"
         },
         "properties": {
-            "baseData": {
-                "$ref": "uri://registries/competition#new/properties/baseData"
-            }
+            "$ref": "uri://registries/competition#new/properties"
         }
     }
 }

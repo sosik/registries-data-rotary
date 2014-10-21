@@ -2,9 +2,26 @@
 	"$schema": "http://json-schema.org/schema#",
 	"id": "uri://registries/season#",
 	"new": {
-		"table" : "seasons",
 		"title" : "Nový suťažný ročník",
-		"xxtransCode": "schema.stadium.title",
+		"transCode": "schema.season.new",
+		"table" : "seasons",
+		"_security": {
+			"_create": {
+				"_static": [
+					"Security - write"
+				]
+			},
+			"_read": {
+				"_static": [
+					"Security - read"
+				]
+			},
+			"_modify": {
+				"_static": [
+					"Security - write"
+				]
+			}
+		},
 		"listFields": [
 			{
 				"field":"baseData.name",
@@ -12,35 +29,20 @@
 			}
 		],
 		"properties":{
-			"_security": {
-				"_create": {
-					"_static": [
-						"Security - write"
-					]
-				},
-				"_read": {
-					"_static": [
-						"Security - read"
-					]
-				},
-				"_modify": {
-					"_static": [
-						"Security - write"
-					]
-				}
-			},
 			"baseData":{
 				"title": "Základné údaje",
+				"transCode": "schema.season.baseData",
 				"type": "object",
 				"properties": {
 					"name": {
 						"title": "Názov",
+						"transCode": "schema.season.name",
 						"type": "string",
 						"required": true
 					},
 					"startSeason": {
                         "title": "Dátum začiatku",
-                        "xxtransCode": "schema.season.baseData.startSeason",
+                        "transCode": "schema.season.startSeason",
                         "type": "string",
                         "required": true,
                         "render": {
@@ -49,7 +51,7 @@
 					},
 					"endSeason": {
                         "title": "Dátum konca",
-                        "xxtransCode": "schema.season.baseData.endSeason",
+                        "transCode": "schema.season.endSeason",
                         "type": "string",
                         "required": true,
                         "render": {
@@ -61,11 +63,17 @@
 		}
 	},
 	"view" : {
-		"$ref" : "uri://registries/season#new"
+		"title" : "Suťažný ročník",
+		"transCode": "schema.season.view",
+		"table" : "seasons",
+		"properties": {
+			"$ref" : "uri://registries/season#new/properties"
+		}
 	},
 	"search" : {
+		"title" : "Suťažný ročník",
+		"transCode": "schema.season.search",
 		"table": "seasons",
-		"title": "Súťažný ročník",
 		"listFields": {
 			"$ref": "uri://registries/season#new/listFields"
 		},
