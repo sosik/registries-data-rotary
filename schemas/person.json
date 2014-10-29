@@ -9,23 +9,14 @@
 			"baseData" : {
 				"$ref": "uri://registries/people#person/properties/baseData"
 			},
-			"player": {
-				"$ref": "uri://registries/people#person/properties/player"
+			"unionMemberEmployerInfo":{
+				"$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
 			},
-			"coach": {
-				"$ref": "uri://registries/people#person/properties/coach"
+			"unionMemberUnionsInfo":{
+				"$ref": "uri://registries/people#person/properties/unionMemberUnionsInfo"
 			},
-			"referee": {
-				"$ref": "uri://registries/people#person/properties/referee"
-			},
-			"officer": {
-				"$ref": "uri://registries/people#person/properties/officer"
-			},
-			"medic": {
-				"$ref": "uri://registries/people#person/properties/medic"
-			},
-			"statistic": {
-				"$ref": "uri://registries/people#person/properties/statistic"
+			"membershipFeeInfo":{
+				"$ref": "uri://registries/people#person/properties/membershipFeeInfo"
 			},
 			"photoInfo": {
 				"$ref": "uri://registries/people#person/properties/photoInfo"

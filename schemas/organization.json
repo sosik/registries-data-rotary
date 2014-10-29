@@ -37,16 +37,22 @@
             "type": "object",
             "properties": {
                 "name": {
-                    "title": "Obchodný názov spoločnosti",
-                    "transCode": "schema.org.name",
+                    "title": "Názov organizácie",
+                    "xxtransCode": "schema.org.name",
                     "type": "string",
                     "required": true
                 },
-                "stateOfOrganization": {
-                    "title": "Stav organizacie",
-                    "transCode": "schema.org.stateOfOrganization",
+                "id": {
+                    "title": "Organizačné číslo",
+                    "xxtransCode": "schema.org.id",
                     "type": "string",
-                    "required": true
+                    "required": false
+                },
+                "birthDate": {
+                    "title": "Dátum vzniku ZO",
+                    "xxtransCode": "schema.org.birthDate",
+                    "type": "string",
+                    "required": false
                 }
             }
         },

@@ -965,25 +965,122 @@
                 }
             }
         },
-        "additionalDataUserIssf": {
-            "title": "Dodatočné informácie",
+        "unionMemberEmployerInfo": {
+            "title": "Údaje zamestnávateľa",
             "type": "object",
             "properties": {
-                "Club": {
-                    "title": "Klub",
+                "employeeNumber": {
+                    "title": "Osobné číslo",
+                    "type": "string",
+                    "required": false
+                },
+                "employedFrom": {
+                    "title": "V zamestnaní od",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },
+                "employer": {
+                    "title": "Zamestnávateľ",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
                         "name": "baseData.name"
                     }
                 },
-                "association": {
-                    "title": "Zväz",
+                "departmentName": {
+                    "title": "Pracovisko",
+                    "type": "string",
+                    "required": false
+                },
+                "occupationName": {
+                    "title": "Pracovné zaradenie",
+                    "type": "string",
+                    "required": false
+                }
+            }
+        },
+        "unionMemberUnionsInfo": {
+            "title": "Údaje Odborov",
+            "type": "object",
+            "properties": {
+                "primaryOrganizationMembershipFrom": {
+                    "title": "Evidov.v ZO od",
+                    "type": "string",
                     "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },
+                "unionMembershipFrom": {
+                    "title": "V odboroch od",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },
+                "primaryOrganizationName": {
+                    "title": "Základná organizácia",
+                    "required": true,
                     "$objectLink": {
                         "registry": "organizations",
                         "name": "baseData.name"
                     }
+                },
+                "unionDepartmentName": {
+                    "title": "Výbor",
+                    "type": "string",
+                    "required": false
+                }
+            }
+        },
+        "membershipFeeInfo": {
+            "title": "Členské príspevky",
+            "type": "object",
+            "properties": {
+                "membershipType": {
+                    "title": "Typ členského príspevku",
+                    "type": "string",
+                    "enum": [
+                        "Extraliga do 23r.",
+                        "Extraliga nad 23r.",
+                        "1.NHL",
+                        "Agent",
+                        "Ostatní"
+                    ],
+                    "required": false,
+                    "render": {
+                        "component": "psui-selectbox",
+                        "searchable": true
+                    }
+                },
+                "paymentFrequency": {
+                    "title": "Frekvencia platby",
+                    "type": "string",
+                    "enum": [
+                        "1xročne",
+                        "2xročne",
+                        "12xročne"
+                    ],
+                    "required": false,
+                    "render": {
+                        "component": "psui-selectbox",
+                        "searchable": true
+                    }
+                },
+                "membershipFee": {
+                    "title": "Výška členského príspevku",
+                    "type": "string",
+                    "required": false
+                },
+                "notes": {
+                    "title": "Poznámka",
+                    "type": "string",
+                    "required": false,
+                    "large": true
                 }
             }
         },
