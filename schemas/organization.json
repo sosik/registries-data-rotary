@@ -38,19 +38,19 @@
             "properties": {
                 "name": {
                     "title": "Názov organizácie",
-                    "xxtransCode": "schema.org.name",
+                    "transCode": "schema.org.name",
                     "type": "string",
                     "required": true
                 },
                 "id": {
                     "title": "Organizačné číslo",
-                    "xxtransCode": "schema.org.id",
+                    "transCode": "schema.org.id",
                     "type": "string",
                     "required": false
                 },
                 "birthDate": {
                     "title": "Dátum vzniku ZO",
-                    "xxtransCode": "schema.org.birthDate",
+                    "transCode": "schema.org.birthDate",
                     "type": "string",
                     "required": false
                 }

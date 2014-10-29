@@ -116,12 +116,13 @@
 		"properties": {
 			"baseData": {
 				"title": "Základné údaje",
+				"transCode": "schema.security.baseData",
 				"type": "object",
 				"properties": {
 					
 					"name": {
 						"title": "Názov",
-						"xxtransCode": "schema.people.baseData.name",
+						"transCode": "schema.security.baseData.name",
 						"type": "string",
 						"required": true
 					}

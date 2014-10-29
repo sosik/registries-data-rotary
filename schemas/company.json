@@ -4,7 +4,7 @@
     "new": {
         "table": "organizations",
         "title": "Organizácia",
-        "xxtransCode": "schema.org.title",
+        "transCode": "schema.org.new",
         "properties": {
             "_security": {
                 "$ref": "uri://registries/organization#properties/_security"
@@ -48,7 +48,7 @@
     "search": {
         "table": "organizations",
         "title": "organizácia",
-        "transCode": "schema.org.view",
+        "transCode": "schema.org.search",
         "listFields": {
             "$ref": "uri://registries/organization#listFields"
         },

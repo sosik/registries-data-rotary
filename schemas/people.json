@@ -967,15 +967,18 @@
         },
         "unionMemberEmployerInfo": {
             "title": "Údaje zamestnávateľa",
+            "transCode":"schema.people.unionMemberEmployerInfo",
             "type": "object",
             "properties": {
-                "employeeNumber": {
+                "employedNumber": {
                     "title": "Osobné číslo",
+                    "transCode":"schema.people.unionMemberEmployerInfo.employeeNumber",
                     "type": "string",
                     "required": false
                 },
                 "employedFrom": {
                     "title": "V zamestnaní od",
+                    "transCode":"schema.people.unionMemberEmployerInfo.employedFrom",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -984,6 +987,7 @@
                 },
                 "employer": {
                     "title": "Zamestnávateľ",
+                    "transCode":"schema.people.unionMemberEmployerInfo.employer",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
@@ -992,11 +996,13 @@
                 },
                 "departmentName": {
                     "title": "Pracovisko",
+                    "transCode":"schema.people.unionMemberEmployerInfo.departmentName",
                     "type": "string",
                     "required": false
                 },
                 "occupationName": {
                     "title": "Pracovné zaradenie",
+                    "transCode":"schema.people.unionMemberEmployerInfo.occupationName",
                     "type": "string",
                     "required": false
                 }
@@ -1004,10 +1010,12 @@
         },
         "unionMemberUnionsInfo": {
             "title": "Údaje Odborov",
+            "transCode":"schema.people.unionMemberUnionsInfo",
             "type": "object",
             "properties": {
                 "primaryOrganizationMembershipFrom": {
                     "title": "Evidov.v ZO od",
+                    "transCode":"schema.people.unionMemberUnionsInfo.primaryOrganizationMembershipFrom",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -1016,6 +1024,7 @@
                 },
                 "unionMembershipFrom": {
                     "title": "V odboroch od",
+                    "transCode":"schema.people.unionMemberUnionsInfo.unionMembershipFrom",
                     "type": "string",
                     "required": false,
                     "render": {
@@ -1024,6 +1033,7 @@
                 },
                 "primaryOrganizationName": {
                     "title": "Základná organizácia",
+                    "transCode":"schema.people.unionMemberUnionsInfo.primaryOrganizationName",
                     "required": true,
                     "$objectLink": {
                         "registry": "organizations",
@@ -1032,6 +1042,7 @@
                 },
                 "unionDepartmentName": {
                     "title": "Výbor",
+                    "transCode":"schema.people.unionMemberUnionsInfo.unionDepartmentName",
                     "type": "string",
                     "required": false
                 }
@@ -1039,10 +1050,12 @@
         },
         "membershipFeeInfo": {
             "title": "Členské príspevky",
+            "transCode":"schema.people.membershipFeeInfo",
             "type": "object",
             "properties": {
                 "membershipType": {
                     "title": "Typ členského príspevku",
+                    "transCode":"schema.people.membershipFeeInfo.membershipType",
                     "type": "string",
                     "enum": [
                         "Extraliga do 23r.",
@@ -1059,6 +1072,7 @@
                 },
                 "paymentFrequency": {
                     "title": "Frekvencia platby",
+                    "transCode":"schema.people.membershipFeeInfo.paymentFrequency",
                     "type": "string",
                     "enum": [
                         "1xročne",
@@ -1073,11 +1087,13 @@
                 },
                 "membershipFee": {
                     "title": "Výška členského príspevku",
+                    "transCode":"schema.people.membershipFeeInfo.membershipFee",
                     "type": "string",
                     "required": false
                 },
                 "notes": {
                     "title": "Poznámka",
+                    "transCode":"schema.people.membershipFeeInfo.notes",
                     "type": "string",
                     "required": false,
                     "large": true

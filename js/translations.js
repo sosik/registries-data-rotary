@@ -190,6 +190,25 @@ angular.module('registries')
 		"schema.people.note":"Poznámka",
 		"schema.people.language":"Jazykové znalosti",
 		
+		"schema.people.unionMemberEmployerInfo":"Údaje zamestnávateľa",
+		"schema.people.unionMemberEmployerInfo.employeeNumber":"Osobné číslo",
+		"schema.people.unionMemberEmployerInfo.employedFrom":"V zamestnaní od",
+		"schema.people.unionMemberEmployerInfo.employer":"Zamestnávateľ",
+		"schema.people.unionMemberEmployerInfo.departmentName":"Pracovisko",
+		"schema.people.unionMemberEmployerInfo.occupationName":"Pracovné zaradenie",
+		
+		"schema.people.unionMemberUnionsInfo":"Údaje Odborov",
+		"schema.people.unionMemberUnionsInfo.primaryOrganizationMembershipFrom":"Evidov.v ZO od",
+		"schema.people.unionMemberUnionsInfo.unionMembershipFrom":"V odboroch od",
+		"schema.people.unionMemberUnionsInfo.primaryOrganizationName":"Základná organizácia",
+		"schema.people.unionMemberUnionsInfo.unionDepartmentName":"Výbor",
+		
+		"schema.people.membershipFeeInfo":"Členské príspevky",
+		"schema.people.membershipFeeInfo.membershipType":"Typ členského príspevku",
+		"schema.people.membershipFeeInfo.paymentFrequency":"Frekvencia platby",
+		"schema.people.membershipFeeInfo.membershipFee":"Výška členského príspevku",
+		"schema.people.membershipFeeInfo.notes":"Poznámka",
+		
 		"schema.people.idInfo":"Registračný preukaz",
 		"schema.people.idInfo.currnetId":"Aktuálne číslo preukazu člena",
 		"schema.people.idInfo.dateOfExpiration":"Dátum platnosti preukazu",
@@ -248,6 +267,9 @@ angular.module('registries')
 		"schema.stadium.surface.natural":"Prírodný",
 		"schema.stadium.surface.artificial":"Umelý",
 
+		"schema.org.new":"Nová organizácia",
+		"schema.org.view":"Detail organizácie",
+		"schema.org.search":"Organizácia",
 		"schema.org.fax":"FAX",
 		"schema.org.webPage":"Webová stránka",
 		
@@ -408,8 +430,9 @@ angular.module('registries')
 		"schema.org.logoInfo":"Logo",
 		"schema.org.logo":"Logo",
 		"schema.org.baseData":"Základné údaje",
-		"schema.org.name":"Registrovaný názov organizácie",
-		"schema.org.identifier":"Identifikátor",
+		"schema.org.name":"Názov organizácie",
+		"schema.org.id":"Organizačné číslo",
+		"schema.org.birthDate":"Dátum vzniku ZO",
 		"schema.org.contactInfo":"Kontaktné údaje",
 		"schema.org.street":"Ulica",
 		"schema.org.houseNumber":"Číslo domu",
@@ -439,7 +462,18 @@ angular.module('registries')
 		"schema.member.title": "Môj profil",
 		"schema.member.new":"Nová osoba",
 		"schema.member.view":"Profil osoby",
-		"schema.member.search":"Osoba"
+		"schema.member.search":"Osoba",
+		
+		"schema.security.baseData":"Základné údaje",
+		"schema.security.baseData.name":"Názov",
+		
+		"schema.group.baseData":"Základné údaje",
+		"schema.group.baseData.title":"Identifikátor",
+		"schema.group.baseData.name":"Názov skupiny",
+		"schema.group.baseData.parent":"Rodič",
+		
+		"schema.securityProfiles.new":"Nový bezpečnostný profil",
+		"schema.securityProfiles.search":"Bezpečnostný profil"
 	});
 	
 	$translateProvider.translations('cz', {
@@ -632,6 +666,25 @@ angular.module('registries')
 		"schema.people.isPhotoPublic":"Je fotka verejná",
 		"schema.people.note":"Poznámka",
 		"schema.people.language":"Jazykové znalosti",
+		
+		"schema.people.unionMemberEmployerInfo":"Údaje zamestnávateľa",
+		"schema.people.unionMemberEmployerInfo.employeeNumber":"Osobné číslo",
+		"schema.people.unionMemberEmployerInfo.employedFrom":"V zamestnaní od",
+		"schema.people.unionMemberEmployerInfo.employer":"Zamestnávateľ",
+		"schema.people.unionMemberEmployerInfo.departmentName":"Pracovisko",
+		"schema.people.unionMemberEmployerInfo.occupationName":"Pracovné zaradenie",
+		
+		"schema.people.unionMemberUnionsInfo":"Údaje Odborov",
+		"schema.people.unionMemberUnionsInfo.primaryOrganizationMembershipFrom":"Evidov.v ZO od",
+		"schema.people.unionMemberUnionsInfo.unionMembershipFrom":"V odboroch od",
+		"schema.people.unionMemberUnionsInfo.primaryOrganizationName":"Základná organizácia",
+		"schema.people.unionMemberUnionsInfo.unionDepartmentName":"Výbor",
+		
+		"schema.people.membershipFeeInfo":"Členské príspevky",
+		"schema.people.membershipFeeInfo.membershipType":"Typ členského príspevku",
+		"schema.people.membershipFeeInfo.paymentFrequency":"Frekvencia platby",
+		"schema.people.membershipFeeInfo.membershipFee":"Výška členského príspevku",
+		"schema.people.membershipFeeInfo.notes":"Poznámka",
 
 		"schema.people.state.of.person":"Stav osoby",
 		"schema.people.profile.yes":"Áno",
@@ -681,6 +734,9 @@ angular.module('registries')
 		"schema.stadium.surface.natural":"Prírodný",
 		"schema.stadium.surface.artificial":"Umelý",
 
+		"schema.org.new":"Nová organizácia",
+		"schema.org.view":"Detail organizácie",
+		"schema.org.search":"Organizácia",
 		"schema.org.fax":"FAX",
 		"schema.org.webPage":"Webová stránka",
 
@@ -841,8 +897,9 @@ angular.module('registries')
 		"schema.org.logoInfo":"Loga",
 		"schema.org.logo":"Logo",
 		"schema.org.baseData":"Základné údaje",
-		"schema.org.name":"Registrovaný názov organizácie",
-		"schema.org.identifier":"Identifikátor",
+		"schema.org.name":"Názov organizácie",
+		"schema.org.id":"Organizačné číslo",
+		"schema.org.birthDate":"Dátum vzniku ZO",
 		"schema.org.contactInfo":"Kontaktné údaje",
 		"schema.org.street":"Ulica",
 		"schema.org.houseNumber":"Číslo domu",
@@ -872,6 +929,17 @@ angular.module('registries')
 		"schema.member.title": "Môj profil",
 		"schema.member.new":"Nová osoba",
 		"schema.member.view":"Profil osoby",
-		"schema.member.search":"Osoba"
+		"schema.member.search":"Osoba",
+		
+		"schema.security.baseData":"Základné údaje",
+		"schema.security.baseData.name":"Názov",
+		
+		"schema.group.baseData":"Základné údaje",
+		"schema.group.baseData.title":"Identifikátor",
+		"schema.group.baseData.name":"Názov skupiny",
+		"schema.group.baseData.parent":"Rodič",
+		
+		"schema.securityProfiles.new":"Nový bezpečnostný profil",
+		"schema.securityProfiles.search":"Bezpečnostný profil"
 	});
 }]);

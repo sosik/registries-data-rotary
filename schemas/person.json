@@ -44,23 +44,14 @@
 			"baseData" : {
 				"$ref": "uri://registries/people#person/properties/baseData"
 			},
-			"player": {
-				"$ref": "uri://registries/people#person/properties/player"
+			"unionMemberEmployerInfo":{
+				"$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
 			},
-			"coach": {
-				"$ref": "uri://registries/people#person/properties/coach"
+			"unionMemberUnionsInfo":{
+				"$ref": "uri://registries/people#person/properties/unionMemberUnionsInfo"
 			},
-			"referee": {
-				"$ref": "uri://registries/people#person/properties/referee"
-			},
-			"officer": {
-				"$ref": "uri://registries/people#person/properties/officer"
-			},
-			"medic": {
-				"$ref": "uri://registries/people#person/properties/medic"
-			},
-			"statistic": {
-				"$ref": "uri://registries/people#person/properties/statistic"
+			"membershipFeeInfo":{
+				"$ref": "uri://registries/people#person/properties/membershipFeeInfo"
 			},
 			"photoInfo": {
 				"$ref": "uri://registries/people#person/properties/photoInfo"
@@ -85,35 +76,26 @@
             "$ref": "uri://registries/people#person/listFields"
         },
         "properties": {
-            "baseData": {
-                "$ref": "uri://registries/people#person/properties/baseData"
-            },
-            "contactInfo": {
-                "$ref": "uri://registries/people#person/properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/people#person/properties/bankInfo"
-            },
-            "otherInfo": {
-                "$ref": "uri://registries/people#person/properties/otherInfo"
-            },
-            "coach": {
-				"$ref": "uri://registries/people#person/properties/coach"
+			"baseData" : {
+				"$ref": "uri://registries/people#person/properties/baseData"
 			},
-			"player": {
-				"$ref": "uri://registries/people#person/properties/player"
+			"unionMemberEmployerInfo":{
+				"$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
 			},
-			"referee": {
-				"$ref": "uri://registries/people#person/properties/referee"
+			"unionMemberUnionsInfo":{
+				"$ref": "uri://registries/people#person/properties/unionMemberUnionsInfo"
 			},
-			"officer": {
-				"$ref": "uri://registries/people#person/properties/officer"
+			"membershipFeeInfo":{
+				"$ref": "uri://registries/people#person/properties/membershipFeeInfo"
 			},
-			"statistic": {
-				"$ref": "uri://registries/people#person/properties/statistic"
+			"contactInfo": {
+				"$ref": "uri://registries/people#person/properties/contactInfo"
 			},
-			"medic": {
-				"$ref": "uri://registries/people#person/properties/medic"
+			"otherInfo": {
+				"$ref": "uri://registries/people#person/properties/otherInfo"
+			},
+			"idInfo": {
+				"$ref": "uri://registries/people#person/properties/idInfo"
 			}
         }
 	}
