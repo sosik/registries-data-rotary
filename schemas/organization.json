@@ -5,12 +5,12 @@
     "title": "Organizacie",
     "listFields": [
         {
-            "field": "id",
-            "title": "ID"
+            "field": "baseData.name",
+            "title": "Názov"
         },
         {
-            "field": "baseData.name",
-            "title": "Meno"
+            "field": "contactInfo.city",
+            "title": "Obec"
         }
     ],
     "properties": {
@@ -422,7 +422,7 @@
                     "title": "IČO",
                     "transCode": "schema.org.ico",
                     "type": "string",
-                    "required": true
+                    "required": false
                 },
                 "dic": {
                     "title": "DIČ",

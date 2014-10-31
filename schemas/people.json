@@ -51,13 +51,13 @@
                     "title": "Registračné číslo",
                     "transCode": "schema.people.registrationID",
                     "type": "string",
-                    "required": true
+                    "required": false
                 },
                 "id": {
                     "title": "Identifikačné číslo",
                     "transCode": "schema.people.identifier",
                     "type": "string",
-                    "required": true
+                    "required": false
                 },
                 "name": {
                     "title": "Meno",
@@ -1058,11 +1058,11 @@
                     "transCode":"schema.people.membershipFeeInfo.membershipType",
                     "type": "string",
                     "enum": [
-                        "Extraliga do 23r.",
-                        "Extraliga nad 23r.",
-                        "1.NHL",
-                        "Agent",
-                        "Ostatní"
+                        "Typ 1",
+                        "Typ 2",
+                        "Typ 3",
+                        "Typ 4",
+                        "Typ 5"
                     ],
                     "required": false,
                     "render": {
@@ -1249,6 +1249,18 @@
                 "language": {
                     "title": "Jazykové znalosti",
                     "transCode": "schema.people.language",
+                    "type": "string",
+                    "required": false
+                },
+                "childreUnder15": {
+                    "title": "Počet detí do 15 rokov",
+                    "transCode": "schema.people.childreUnder15",
+                    "type": "string",
+                    "required": false
+                },
+                "childreOver15": {
+                    "title": "Počet detí nad 15 rokov",
+                    "transCode": "schema.people.childreOver15",
                     "type": "string",
                     "required": false
                 }

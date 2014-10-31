@@ -29,9 +29,9 @@
 						"type": "string",
 						"required": true
 					},
-					"details": {
-						"title": "Detaily",
-						"transCode": "schema.event.details",
+					"description": {
+						"title": "Popis",
+						"transCode": "schema.event.description",
 						"type": "string",
 						"required": true,
 						"large":"true"
@@ -60,18 +60,19 @@
 							"component": "psui-datepicker"
 						}
 					},
-					"organizator": {
-						"title": "Organizátor",
-						"transCode": "schema.event.organizator",
+					"chief": {
+						"title": "Vedúci",
+						"transCode": "schema.event.chief",
 						"required": false,
 						"$objectLink": {
-							"registry": "organizations",
-							"name": "baseData.name"
+							"registry": "people",
+							"surName": "baseData.surName",
+							"name":"baseData.name"
 						}
 					},
-					"sponzor": {
-						"title": "Sponzor",
-						"transCode": "schema.event.sponzor",
+					"ZO": {
+						"title": "ZO",
+						"transCode": "schema.event.ZO",
 						"required": false,
 						"$objectLink": {
 							"registry": "organizations",
@@ -82,7 +83,7 @@
 						"title": "Vstupné",
 						"transCode": "schema.event.ticketCost",
 						"type": "string",
-						"required": true
+						"required": false
 					}
 				}
             }
