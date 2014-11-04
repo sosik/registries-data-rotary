@@ -28,7 +28,7 @@
                     "required": true
                 },
                 "name": {
-                    "title": "Nazov skupiny",
+                    "title": "Názov skupiny",
                     "transCode":"schema.group.baseData.name",
                     "type": "string",
                     "required": true
@@ -37,8 +37,8 @@
 					"title": "Rodič",
 					"transCode":"schema.group.baseData.parent",
                     "$objectLink": {
-                        "$registry": "groups",
-                        "name": "name"
+                        "registry": "groups",
+                        "name": "baseData.name"
                     }
                 }
             }

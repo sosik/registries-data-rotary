@@ -2,6 +2,8 @@
 	"$schema" : "http://json-schema.org/schema#",
 	"id" : "uri://registries/security#groupmaster",
 	"new" : {
+		"title":"Bezpečnostná skupina",
+		"xxtransCode":"schema.groupmaster.new",
 		"table" : "groups",
 		"properties" : {
 			"baseData" : {

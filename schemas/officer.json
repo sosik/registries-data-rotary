@@ -2,12 +2,12 @@
     "$schema": "http://json-schema.org/schema#",
     "id": "uri://registries/officer#",
     "new": {
-        "table": "people",
         "title": "Osoba",
+        "table": "people",
+        "_security": {
+            "$ref": "uri://registries/people#person/_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/people#person/properties/_security"
-            },
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },
@@ -29,16 +29,16 @@
         }
     },
     "view": {
-        "table": "people",
         "title": "Osoba",
+        "table": "people",
         "transCode": "schema.people.officer.view",
         "properties": {
 	        "$ref": "uri://registries/officer#new/properties"
         }
     },
     "search": {
-        "table": "people",
         "title": "osoba",
+        "table": "people",
         "transCode": "schema.people.officer.search",
         "listFields": {
             "$ref": "uri://registries/people#person/listFields"

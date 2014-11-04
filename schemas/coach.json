@@ -2,12 +2,12 @@
     "$schema": "http://json-schema.org/schema#",
     "id": "uri://registries/coach#",
     "new": {
-        "table": "people",
         "title": "Tréner",
+        "table": "people",
+        "_security": {
+            "$ref": "uri://registries/people#person/_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/people#person/properties/_security"
-            },
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },
@@ -29,17 +29,17 @@
         }
     },
     "view": {
-        "table": "people",
         "title": "Profil trénera",
         "transCode":"schema.people.coach.view",
+        "table": "people",
         "properties": {
 	        "$ref": "uri://registries/coach#new/properties"
         }
     },
     "search": {
-        "table": "people",
         "title": "Tréner",
         "transCode":"schema.people.coach.search",
+        "table": "people",
         "listFields": {
             "$ref": "uri://registries/people#person/properties/coach/listFields"
         },

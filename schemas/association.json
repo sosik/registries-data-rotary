@@ -5,10 +5,10 @@
         "title": "Nový zväz",
         "transCode":"schema.association.new",
         "table": "organizations",
+        "_security": {
+            "$ref": "uri://registries/organization#_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/organization#properties/_security"
-            },
             "association": {
                 "$ref": "uri://registries/organization#properties/association"
             },

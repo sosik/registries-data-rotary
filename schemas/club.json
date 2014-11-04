@@ -5,10 +5,10 @@
         "table": "organizations",
         "title": "Nový klub",
         "transCode":"schema.club.new",
+        "_security": {
+            "$ref": "uri://registries/organization#_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/organization#properties/_security"
-            },
             "club": {
                 "$ref": "uri://registries/organization#properties/club"
             },
@@ -30,10 +30,10 @@
         "table": "organizations",
         "title": "Klub",
         "transCode": "schema.club.view",
+        "_security": {
+            "$ref": "uri://registries/organization#_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/organization#properties/_security"
-            },
             "club": {
                 "$ref": "uri://registries/organization#properties/club"
             },

@@ -1,32 +1,27 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "id": "uri://registries/roster#",
-    "listFields": [
-        {
-            "field": "id",
-            "title": "ID"
-        },
-        {
-            "field": "baseData.name",
-            "title": "Meno"
-        },
-        {
-            "field": "baseData.surName",
-            "title": "Priezvisko"
-        },
-        {
-            "field": "baseData.birthDate",
-            "title": "Dátum narodenia"
-        },
-        {
-            "field": "contactInfo.city",
-            "title": "Mesto"
-        }
-    ],
     "new": {
         "table": "rosters",
         "title": "Nová súpiska",
         "transCode":"schema.roster.new",
+        "_security": {
+            "_create": {
+                "_static": [
+                    "Security - write"
+                ]
+            },
+            "_read": {
+                "_static": [
+                    "Security - read"
+                ]
+            },
+            "_modify": {
+                "_static": [
+                    "Security - write"
+                ]
+            }
+        },
         "properties": {
             "baseData": {
                 "title": "Základné údaje",
@@ -265,6 +260,9 @@
         "title": "Detail súpisky",
         "transCode":"schema.roster.view",
         "table": "rosters",
+        "_security": {
+            "$ref": "uri://registries/roster#new/_security"
+        },
         "properties": {
 	        "$ref": "uri://registries/roster#new/properties"
         }
@@ -273,6 +271,9 @@
         "title": "Súpisky",
         "transCode":"schema.roster.search",
         "table": "rosters",
+        "_security": {
+            "$ref": "uri://registries/roster#new/_security"
+        },
         "listFields": [
             {
                 "field": "baseData.season.refData.name",

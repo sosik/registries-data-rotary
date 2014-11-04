@@ -3,6 +3,23 @@
     "id": "uri://registries/people#person",
     "table": "people",
     "title": "person",
+    "_security": {
+        "_create": {
+            "_static": [
+                "Security - write"
+            ]
+        },
+        "_read": {
+            "_static": [
+                "Security - read"
+            ]
+        },
+        "_modify": {
+            "_static": [
+                "Security - write"
+            ]
+        }
+    },
     "listFields": [
         {
             "field": "baseData.surName",
@@ -24,23 +41,6 @@
     "properties": {
         "systemCredentials": {
             "$ref": "uri://registries/security#systemCredentials"
-        },
-        "_security": {
-            "_create": {
-                "_static": [
-                    "Security - write"
-                ]
-            },
-            "_read": {
-                "_static": [
-                    "Security - read"
-                ]
-            },
-            "_modify": {
-                "_static": [
-                    "Security - write"
-                ]
-            }
         },
         "baseData": {
             "title": "Základné údaje",

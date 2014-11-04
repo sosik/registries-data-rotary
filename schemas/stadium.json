@@ -5,6 +5,23 @@
 		"table" : "stadiums",
 		"title" : "Nový športový objekt",
 		"transCode": "schema.stadium.new",
+		"_security": {
+			"_create": {
+				"_static": [
+					"Security - write"
+				]
+			},
+			"_read": {
+				"_static": [
+					"Security - read"
+				]
+			},
+			"_modify": {
+				"_static": [
+					"Security - write"
+				]
+			}
+		},
 		"listFields": [
 			{
 				"field":"baseData.name", 
@@ -16,23 +33,6 @@
 			}
 		],
 		"properties":{
-			"_security": {
-				"_create": {
-					"_static": [
-						"Security - write"
-					]
-				},
-				"_read": {
-					"_static": [
-						"Security - read"
-					]
-				},
-				"_modify": {
-					"_static": [
-						"Security - write"
-					]
-				}
-			},
 			"baseData":{
 				"title": "Základné údaje",
 				"transCode": "schema.stadium.baseData",

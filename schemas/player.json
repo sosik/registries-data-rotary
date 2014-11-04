@@ -4,10 +4,10 @@
     "new": {
         "title": "Hráč",
         "table": "people",
+        "_security": {
+            "$ref": "uri://registries/people#person/_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/people#person/properties/_security"
-            },
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },
@@ -32,6 +32,9 @@
         "title": "Hráč",
         "transCode": "schema.people.player.view",
         "table": "people",
+        "_security": {
+            "$ref": "uri://registries/people#person/_security"
+        },
 		"clientActions": [
 			{
 				"__DIRECTIVE__": "action-link",
@@ -41,9 +44,6 @@
 			}
 		],
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/people#person/properties/_security"
-            },
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },

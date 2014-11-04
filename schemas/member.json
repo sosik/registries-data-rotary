@@ -2,13 +2,13 @@
     "$schema": "http://json-schema.org/schema#",
     "id": "uri://registries/member#",
     "new": {
-        "table": "people",
 		"title" : "Môj profil",
 		"transCode": "schema.member.title",
+        "table": "people",
+        "_security": {
+            "$ref": "uri://registries/people#person/_security"
+        },
         "properties": {
-			"_security": {
-				"$ref": "uri://registries/people#person/properties/_security"
-			},
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },
@@ -30,9 +30,9 @@
         "$ref": "uri://registries/member#new"
     },
     "search": {
-    	"table": "people",
     	"title": "osoba",
 		"transCode":"schema.member.view",
+        "table": "people",
         "listFields": {
             "$ref": "uri://registries/people#person/listFields"
         },

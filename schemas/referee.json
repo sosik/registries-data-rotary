@@ -2,12 +2,12 @@
     "$schema": "http://json-schema.org/schema#",
     "id": "uri://registries/referee#",
     "new": {
-        "table": "people",
         "title": "Rozhodca",
+        "table": "people",
+        "_security": {
+            "$ref": "uri://registries/people#person/_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/people#person/properties/_security"
-            },
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },
@@ -29,8 +29,8 @@
         }
     },
     "view": {
-        "table": "people",
         "title": "Rozhodca",
+        "table": "people",
         "transCode":"schema.people.referee.view",
         "properties": {
 	        "$ref": "uri://registries/referee#new/properties"
@@ -38,8 +38,8 @@
 
     },
     "search": {
-        "table": "people",
         "title": "Rozhodca",
+        "table": "people",
         "transCode":"schema.people.referee.search",
         "listFields": {
             "$ref": "uri://registries/people#person/listFields"

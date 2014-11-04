@@ -5,10 +5,10 @@
         "table": "organizations",
         "title": "Organizácia",
         "transCode": "schema.org.new",
+        "_security": {
+            "$ref": "uri://registries/organization#_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/organization#properties/_security"
-            },
             "baseData": {
                 "$ref": "uri://registries/organization#properties/baseData"
             },
@@ -27,10 +27,10 @@
         "table": "organizations",
         "title": "organizácia",
         "transCode": "schema.org.view",
+        "_security": {
+            "$ref": "uri://registries/organization#_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/organization#properties/_security"
-            },
             "baseData": {
                 "$ref": "uri://registries/organization#properties/baseData"
             },
