@@ -6,36 +6,40 @@
     "_security": {
         "_create": {
             "_static": [
-                "Security - write"
+                "Registry - write"
             ]
         },
         "_read": {
             "_static": [
-                "Security - read"
+                "Registry - read"
             ]
         },
         "_modify": {
             "_static": [
-                "Security - write"
+                "Registry - write"
             ]
         }
     },
     "listFields": [
         {
             "field": "baseData.surName",
-            "title": "Priezvisko"
+            "title": "Priezvisko",
+            "transCode": "schema.people.listFields.surName"
         },
         {
             "field": "baseData.name",
-            "title": "Meno"
+            "title": "Meno",
+            "transCode": "schema.people.listFields.name"
         },
         {
             "field": "baseData.birthDate",
-            "title": "Dátum narodenia"
+            "title": "Dátum narodenia",
+            "transCode": "schema.people.listFields.birthDate"
         },
         {
             "field": "contactInfo.city",
-            "title": "Mesto"
+            "title": "Mesto",
+            "transCode": "schema.people.listFields.city"
         }
     ],
     "properties": {
@@ -71,21 +75,9 @@
                     "type": "string",
                     "required": true
                 },
-                "bornName": {
-                    "title": "Rodné priezvisko",
-                    "transCode": "schema.people.bornName",
-                    "type": "string",
-                    "required": false
-                },
                 "titleBefore": {
                     "title": "Titul pred",
                     "transCode": "schema.people.title.before",
-                    "type": "string",
-                    "required": false
-                },
-                "titleAfter": {
-                    "title": "Titul za",
-                    "transCode": "schema.people.title.after",
                     "type": "string",
                     "required": false
                 },
@@ -115,9 +107,6 @@
                         "component": "psui-selectbox",
                         "searchable": true
                     }
-                },
-                "nationality": {
-                    "$ref": "uri://registries/nationality#country"
                 },
                 "stateOfPerson": {
                     "title": "Stav osoby",
@@ -1112,8 +1101,8 @@
                     "required": false,
                     "render": {
                         "component": "psui-uploadable-image",
-                        "height": 400,
-                        "width": 300
+                        "height": 300,
+                        "width": 220
                     }
                 }
             }
@@ -1164,6 +1153,21 @@
                     "transCode": "schema.people.email",
                     "type": "string",
                     "required": false
+                },
+                "currnetId": {
+                    "title": "Aktuálne číslo preukazu člena",
+                    "transCode":"schema.people.idInfo.currnetId",
+                    "type": "string",
+                    "required": false
+                },
+                "dateOfExpiration": {
+                    "title": "Dátum platnosti preukazu",
+                    "transCode":"schema.people.idInfo.dateOfExpiration",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
                 }
             }
         },
@@ -1233,25 +1237,6 @@
                     "type": "string",
                     "required": false
                 },
-                "passportNumber": {
-                    "title": "Číslo pasu",
-                    "transCode": "schema.people.passportNumber",
-                    "type": "string",
-                    "required": false
-                },
-                "note": {
-                    "title": "Poznámka",
-                    "transCode": "schema.people.note",
-                    "type": "string",
-                    "required": false,
-                    "large": true
-                },
-                "language": {
-                    "title": "Jazykové znalosti",
-                    "transCode": "schema.people.language",
-                    "type": "string",
-                    "required": false
-                },
                 "childreUnder15": {
                     "title": "Počet detí do 15 rokov",
                     "transCode": "schema.people.childreUnder15",
@@ -1263,6 +1248,13 @@
                     "transCode": "schema.people.childreOver15",
                     "type": "string",
                     "required": false
+                },
+                "note": {
+                    "title": "Poznámka",
+                    "transCode": "schema.people.note",
+                    "type": "string",
+                    "required": false,
+                    "large": true
                 }
             }
         },

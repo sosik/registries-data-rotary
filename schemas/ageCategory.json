@@ -8,17 +8,17 @@
     "_security": {
       "_create": {
         "_static": [
-          "Security - write"
+          "Registry - write"
         ]
       },
       "_read": {
         "_static": [
-          "Security - read"
+          "Registry - read"
         ]
       },
       "_modify": {
         "_static": [
-          "Security - write"
+          "Registry - write"
         ]
       }
     },

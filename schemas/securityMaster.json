@@ -1,11 +1,10 @@
 {
 	"$schema" : "http://json-schema.org/schema#",
 	"id" : "uri://registries/security#profilesmaster",
-	
 	"new" : {
-		"table":"securityProfiles",
 		"title": "Nový bezpečnostný profil",
-		"transCode":"schema.securityProfiles.new",
+		"transCode": "schema.securityMaster.new",
+		"table":"securityProfiles",
 		"_security" : {
 			"$ref" : "uri://registries/security#profiles/_security"
 		},
@@ -16,20 +15,33 @@
 		}
 	},
 	"view" : {
-		"$ref" : "uri://registries/security#profilesmaster/new"
+		"title": "Bezpečnostný profil",
+		"transCode": "schema.securityMaster.view",
+		"table":"securityProfiles",
+		"_security" : {
+			"$ref" : "uri://registries/security#profiles/_security"
+		},
+		"properties" : {
+			"baseData" : {
+				"$ref": "uri://registries/security#profiles/properties/baseData"
+			}
+		}
 	},
 	"search" : {
+		"title": "Bezpečnostný profil",
+		"transCode": "schema.securityMaster.search",
 		"table":"securityProfiles",
-		"title":"bezpečnostný profil",
-		"transCode":"schema.securityProfiles.search",
 		"listFields": {
 			"$ref": "uri://registries/security#profiles/listFields"
 		},
 		"properties" : {
 			"baseData" : {
 				"$ref": "uri://registries/security#profiles/properties/baseData"
+			},
+			"security" : {
+				"$ref": "uri://registries/security#profiles/properties/security"
 			}
-		}	
-		
+		}
+
 	}
 }

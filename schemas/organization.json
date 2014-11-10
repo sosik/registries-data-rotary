@@ -6,27 +6,29 @@
     "listFields": [
         {
             "field": "baseData.name",
-            "title": "Názov"
+            "title": "Názov",
+            "transCode": "schema.organization.listFields.name"
         },
         {
             "field": "contactInfo.city",
-            "title": "Obec"
+            "title": "Mesto",
+            "transCode": "schema.organization.listFields.city"
         }
     ],
     "_security": {
         "_create": {
             "_static": [
-                "Security - write"
+                "Registry - write"
             ]
         },
         "_read": {
             "_static": [
-                "Security - read"
+                "Registry - read"
             ]
         },
         "_modify": {
             "_static": [
-                "Security - write"
+                "Registry - write"
             ]
         }
     },
@@ -340,8 +342,8 @@
                     "required": false,
                     "render": {
                         "component": "psui-uploadable-image",
-                        "height": 300,
-                        "width": 300
+                        "height": 220,
+                        "width": 220
                     }
                 }
             }
@@ -371,9 +373,6 @@
                     "transCode": "schema.org.zipCode",
                     "type": "string",
                     "required": false
-                },
-                "country": {
-                    "$ref": "uri://registries/countries#country"
                 },
                 "phoneNumber": {
                     "title": "Telefón",

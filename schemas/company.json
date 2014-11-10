@@ -17,9 +17,6 @@
             },
             "contactInfo": {
                 "$ref": "uri://registries/organization#properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/organization#properties/bankInfo"
             }
         }
     },
@@ -39,9 +36,6 @@
             },
             "contactInfo": {
                 "$ref": "uri://registries/organization#properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/organization#properties/bankInfo"
             }
         }
     },
@@ -58,9 +52,6 @@
             },
             "contactInfo": {
                 "$ref": "uri://registries/organization#properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/organization#properties/bankInfo"
             }
         }
     }

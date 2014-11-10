@@ -2,11 +2,9 @@
 	"$schema": "http://json-schema.org/schema#",
 	"id": "uri://registries/security",
 	"type": "object",
-	
 	"permissions": {
 		"type": "object",
 		"properties":{
-			
 			"System User": {
 				"title": "Systémový používateľ",
 				"type": "boolean",
@@ -110,7 +108,8 @@
 		"listFields": [
 			{
 			"field": "baseData.name",
-			"title": "Nazov profilu"
+			"title": "Názov profilu",
+			"transCode": "schema.security.listFields.name"
 			}
 		],
 		"properties": {
@@ -119,20 +118,16 @@
 				"transCode": "schema.security.baseData",
 				"type": "object",
 				"properties": {
-					
 					"name": {
 						"title": "Názov",
 						"transCode": "schema.security.baseData.name",
 						"type": "string",
 						"required": true
 					}
-					
 				}
-
 			},
 			"security": {
 				"properties":{
-
 					"permissions": {
 						"$ref": "uri://registries/security#permissions"
 					},
@@ -158,7 +153,18 @@
 										"properties": {
 											"f": "string",
 											"op": "string",
-											"v": "string"
+											"v": "string",
+											"obj":{
+												"type":"object",
+												"properties":{
+													"refData": {
+														"type":"object",
+														"properties":{
+															"name":"string"
+														}
+													}
+												}
+											}	
 										}
 									}
 								}

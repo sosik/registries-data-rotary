@@ -16,10 +16,9 @@
 				"_static":["Registry - write"]
 			}
 		},
-
         "properties": {
             "baseData": {
-                "title": "Základné údaje",
+                "title": "Základné informácie",
                 "transCode": "schema.event.baseData",
 				"type": "object",
 				"properties": {
@@ -29,59 +28,58 @@
 						"type": "string",
 						"required": true
 					},
-					"description": {
-						"title": "Popis",
-						"transCode": "schema.event.description",
+					"details": {
+						"title": "Detaily",
+						"transCode": "schema.event.details",
 						"type": "string",
-						"required": true,
+						"required": false,
 						"large":"true"
 					},
-					"place": {
+					"location": {
 						"title": "Miesto udalosti",
-						"transCode": "schema.event.place",
+						"transCode": "schema.event.location",
 						"type": "string",
 						"required": true
 					},
-					"time": {
-						"title": "Čas udalosti",
-						"transCode": "schema.event.time",
+					"startDate": {
+						"title": "Dátum začatia",
+						"transCode": "schema.event.startDate",
 						"type": "string",
 						"required": true,
 						"render": {
 							"component": "psui-datepicker"
 						}
 					},
-					"end": {
-						"title": "Čas ukončenia",
-						"transCode": "schema.event.end",
+					"endDate": {
+						"title": "Dátum ukončenia",
+						"transCode": "schema.event.endDate",
 						"type": "string",
-						"required": true,
-						"render": {
-							"component": "psui-datepicker"
-						}
-					},
-					"chief": {
-						"title": "Vedúci",
-						"transCode": "schema.event.chief",
 						"required": false,
-						"$objectLink": {
-							"registry": "people",
-							"surName": "baseData.surName",
-							"name":"baseData.name"
+						"render": {
+							"component": "psui-datepicker"
 						}
 					},
-					"ZO": {
-						"title": "ZO",
-						"transCode": "schema.event.ZO",
+					"organizer": {
+						"title": "Organizátor",
+						"transCode": "schema.event.organizer",
 						"required": false,
 						"$objectLink": {
 							"registry": "organizations",
 							"name": "baseData.name"
 						}
 					},
-					"ticketCost": {
+					"sponsor": {
+						"title": "Sponzor",
+						"transCode": "schema.event.sponsor",
+						"required": false,
+						"$objectLink": {
+							"registry": "organizations",
+							"name": "baseData.name"
+						}
+					},
+					"entranceFee": {
 						"title": "Vstupné",
-						"transCode": "schema.event.ticketCost",
+						"transCode": "schema.event.entranceFee",
 						"type": "string",
 						"required": false
 					}
@@ -124,8 +122,21 @@
 			}
 		},
         "listFields": [
-            {"field":"baseData.name", "title":"Meno", "xxtransCode":"schema.org.listFields.name"},
-			{"field":"baseData.start", "title":"Dátum začiatka", "xxtransCode":"schema.org.listFields.name"}
+            {
+            	"field":"baseData.name",
+            	"title":"Názov", 
+            	"transCode":"schema.event.listFields.title"
+            },
+			{
+				"field":"baseData.location", 
+				"title":"Miesto", 
+				"transCode":"schema.event.listFields.location"
+			},
+			{
+				"field":"baseData.startDate", 
+				"title":"Dátum začatia", 
+				"transCode":"schema.event.listFields.startDate"
+			}
         ],
         "properties": {
             "baseData": {

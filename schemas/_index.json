@@ -34,5 +34,9 @@
 	"competitionPart.json",
 	"schedule.json",
 	"match.json",
-	"delegateReport.json"
+	"delegateReport.json",
+	"mailTemplates.json",
+	"mailTemplatesMaster.json",
+	"imports.json",
+	"payments.json"
 ]

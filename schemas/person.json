@@ -9,6 +9,9 @@
 			"baseData" : {
 				"$ref": "uri://registries/people#person/properties/baseData"
 			},
+			"photoInfo": {
+				"$ref": "uri://registries/people#person/properties/photoInfo"
+			},
 			"unionMemberEmployerInfo":{
 				"$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
 			},
@@ -18,21 +21,14 @@
 			"membershipFeeInfo":{
 				"$ref": "uri://registries/people#person/properties/membershipFeeInfo"
 			},
-			"photoInfo": {
-				"$ref": "uri://registries/people#person/properties/photoInfo"
-			},
 			"contactInfo": {
 				"$ref": "uri://registries/people#person/properties/contactInfo"
 			},
 			"otherInfo": {
 				"$ref": "uri://registries/people#person/properties/otherInfo"
-			},
-			"idInfo": {
-				"$ref": "uri://registries/people#person/properties/idInfo"
 			}
 		}
 	},
-	
 	"view" : {
 		"table": "people",
     	"title": "Profil osoby",
@@ -44,6 +40,9 @@
 			"baseData" : {
 				"$ref": "uri://registries/people#person/properties/baseData"
 			},
+			"photoInfo": {
+				"$ref": "uri://registries/people#person/properties/photoInfo"
+			},
 			"unionMemberEmployerInfo":{
 				"$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
 			},
@@ -53,21 +52,14 @@
 			"membershipFeeInfo":{
 				"$ref": "uri://registries/people#person/properties/membershipFeeInfo"
 			},
-			"photoInfo": {
-				"$ref": "uri://registries/people#person/properties/photoInfo"
-			},
 			"contactInfo": {
 				"$ref": "uri://registries/people#person/properties/contactInfo"
 			},
 			"otherInfo": {
 				"$ref": "uri://registries/people#person/properties/otherInfo"
-			},
-			"idInfo": {
-				"$ref": "uri://registries/people#person/properties/idInfo"
 			}
         }
 	},
-	
 	"search" : {
 		"table": "people",
     	"title": "Osoba",
@@ -93,9 +85,6 @@
 			},
 			"otherInfo": {
 				"$ref": "uri://registries/people#person/properties/otherInfo"
-			},
-			"idInfo": {
-				"$ref": "uri://registries/people#person/properties/idInfo"
 			}
         }
 	}

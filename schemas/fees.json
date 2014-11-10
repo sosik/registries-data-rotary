@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/schema#",
     "id": "uri://registries/fees#",
     "new": {
-        "title": "Nový príspevok",
+        "title": "Nový poplatok",
         "transCode": "schema.fees.new",
         "table": "fees",
         "_security": {
@@ -25,7 +25,7 @@
         "properties": {
             "baseData": {
                 "title": "Základné údaje",
-		        "transCode": "schema.fees.baseData",
+                "transCode": "schema.fees.baseData",
                 "type": "object",
                 "properties": {
                     "member": {
@@ -40,7 +40,7 @@
                         }
                     },
                     "membershipFee": {
-                        "title": "Výška príspevku",
+                        "title": "Výška poplatku",
                         "transCode": "schema.fees.baseData.membershipFee",
                         "type": "string",
                         "required": true
@@ -99,8 +99,8 @@
                             "Nezaplatené"
                         ],
                         "enumTransCodes": [
-                        	"schema.fees.baseData.feePaymentStatus.paid",
-                        	"schema.fees.baseData.feePaymentStatus.unpaid"
+                            "schema.fees.baseData.feePaymentStatus.paid",
+                            "schema.fees.baseData.feePaymentStatus.unpaid"
                         ],
                         "required": false,
                         "render": {
