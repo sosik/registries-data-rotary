@@ -15,11 +15,17 @@
             "photoInfo": {
                 "$ref": "uri://registries/people#person/properties/photoInfo"
             },
+            "unionMemberEmployerInfo": {
+                "$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
+            },
+            "unionMemberUnionsInfo": {
+                "$ref": "uri://registries/people#person/properties/unionMemberUnionsInfo"
+            },
+            "membershipFeeInfo": {
+                "$ref": "uri://registries/people#person/properties/membershipFeeInfo"
+            },
             "contactInfo": {
                 "$ref": "uri://registries/people#person/properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/people#person/properties/bankInfo"
             },
             "otherInfo": {
                 "$ref": "uri://registries/people#person/properties/otherInfo"
@@ -43,11 +49,20 @@
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },
+            "photoInfo": {
+                "$ref": "uri://registries/people#person/properties/photoInfo"
+            },
+            "unionMemberEmployerInfo": {
+                "$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
+            },
+            "unionMemberUnionsInfo": {
+                "$ref": "uri://registries/people#person/properties/unionMemberUnionsInfo"
+            },
+            "membershipFeeInfo": {
+                "$ref": "uri://registries/people#person/properties/membershipFeeInfo"
+            },
             "contactInfo": {
                 "$ref": "uri://registries/people#person/properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/people#person/properties/bankInfo"
             },
             "otherInfo": {
                 "$ref": "uri://registries/people#person/properties/otherInfo"
