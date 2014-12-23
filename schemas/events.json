@@ -65,7 +65,7 @@
 						"required": false,
 						"$objectLink": {
 							"registry": "organizations",
-							"name": "baseData.name"
+							"name": "baseData.name.v"
 						}
 					},
 					"sponsor": {

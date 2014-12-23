@@ -42,7 +42,8 @@
                     "title": "Názov organizácie",
                     "transCode": "schema.org.name",
                     "type": "string",
-                    "required": true
+                    "required": true,
+                    "$collate":true
                 },
                 "id": {
                     "title": "Organizačné číslo",

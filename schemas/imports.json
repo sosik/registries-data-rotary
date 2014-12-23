@@ -6,6 +6,8 @@
 		"transCode": "schema.imports.new",
 		"table": "imports",
 
+		"_saveBySchema":"uri://registries/imports#view",
+
 		"_fireEvents":{
             "create": "event-import-created"
         },
@@ -43,7 +45,7 @@
 						}
 					},
 					"type": {
-						"title": "Fotografia",
+						"title": "typ",
 						"transCode": "schema.imports.type",
 						"type": " string",
 						"enum": [
@@ -54,13 +56,6 @@
 							"component": "psui-selectbox",
 							"searchable": true
 						}
-					},
-
-					"createdOn": {
-						"title": "Vytvorene",
-						"transCode": "schema.imports.createdOn",
-						"type": "Date",
-						"$timestamp" : true
 					}
 				}
 			}
@@ -166,7 +161,7 @@
 			{
 				"field": "baseData.file",
 				"title": "Soubor",
-				"transCode": "schema.imports.type"
+				"transCode": "schema.imports.file"
 			}
 		],
 		"properties": {
