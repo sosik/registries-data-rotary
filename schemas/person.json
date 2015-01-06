@@ -4,6 +4,9 @@
 	"new" : {
 		"table" : "people",
 		"title" : "Nová osoba",
+		"_security": {
+			"$ref": "uri://registries/people#person/_security"
+		},
 		"transCode": "schema.member.new",
 		"properties" : {
 			"baseData" : {
@@ -11,12 +14,6 @@
 			},
 			"photoInfo": {
 				"$ref": "uri://registries/people#person/properties/photoInfo"
-			},
-			"unionMemberEmployerInfo":{
-				"$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
-			},
-			"unionMemberUnionsInfo":{
-				"$ref": "uri://registries/people#person/properties/unionMemberUnionsInfo"
 			},
 			"membershipFeeInfo":{
 				"$ref": "uri://registries/people#person/properties/membershipFeeInfo"
@@ -31,24 +28,18 @@
 	},
 	"view" : {
 		"table": "people",
-    	"title": "Profil osoby",
+		"title": "Profil osoby",
 		"transCode":"schema.member.view",
-        "listFields": {
-            "$ref": "uri://registries/people#person/listFields"
-        },
-        "properties": {
+		"listFields": {
+			"$ref": "uri://registries/people#person/listFields"
+		},
+		"properties": {
 			"baseData" : {
 				"$ref": "uri://registries/people#person/properties/baseData"
 			},
 			"photoInfo": {
 				"$ref": "uri://registries/people#person/properties/photoInfo"
 			},
-			"unionMemberEmployerInfo":{
-				"$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
-			},
-			"unionMemberUnionsInfo":{
-				"$ref": "uri://registries/people#person/properties/unionMemberUnionsInfo"
-			},
 			"membershipFeeInfo":{
 				"$ref": "uri://registries/people#person/properties/membershipFeeInfo"
 			},
@@ -58,24 +49,18 @@
 			"otherInfo": {
 				"$ref": "uri://registries/people#person/properties/otherInfo"
 			}
-        }
+		}
 	},
 	"search" : {
 		"table": "people",
-    	"title": "Osoba",
+		"title": "Osoba",
 		"transCode":"schema.member.search",
-        "listFields": {
-            "$ref": "uri://registries/people#person/listFields"
-        },
-        "properties": {
+		"listFields": {
+			"$ref": "uri://registries/people#person/listFields"
+		},
+		"properties": {
 			"baseData" : {
 				"$ref": "uri://registries/people#person/properties/baseData"
-			},
-			"unionMemberEmployerInfo":{
-				"$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
-			},
-			"unionMemberUnionsInfo":{
-				"$ref": "uri://registries/people#person/properties/unionMemberUnionsInfo"
 			},
 			"membershipFeeInfo":{
 				"$ref": "uri://registries/people#person/properties/membershipFeeInfo"
@@ -86,6 +71,6 @@
 			"otherInfo": {
 				"$ref": "uri://registries/people#person/properties/otherInfo"
 			}
-        }
+		}
 	}
 }
