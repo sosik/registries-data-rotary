@@ -1,115 +1,49 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic&subset=latin,latin-ext);
 
+body {
+	overflow-y: scroll;
+}
+
 #portal-main-container {
-	background-color: silver;
 	font-size: 14px;
 	font-family: 'Source Sans Pro', sans-serif;
 	color: gray;
-	min-width: 1006px;
+	background-color: white;
 }
 
 #portal-header-container {
-	padding-top: 8px;
-	padding-bottom: 8px;
-	background-color: #C4EBCC;	
+	padding-top: 0px;
+	padding-bottom: 23px;
+	background-color: white;
 }
 
 #portal-main-header {
 	position: relative;
 	width: 1006px;
 	margin: 0 auto;
-	background-color: #C4EBCC;
+	margin-top: 23px;
 }
 
-#portal-main-header h1{
-	color: #ffffff;
+#portal-main-header h1 {
+	color: #555;
 	position: absolute;
 	right: 0;
 	bottom: 0;
 }
 
-#portal-club-logos-panel-container {
-	background-color: white;
-}
-
-#portal-club-logos-panel-container {
-	background-color: white;
-}
-
-#portal-club-logos-panel {
-	width: 1006px;
-	margin: 0 auto;
-	display: table;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	background-color: white;
-}
-
-#portal-club-logos-panel .portal-club-logo {
-	background-repeat: no-repeat;
-	background-size: 26px 26px;
-	background-position: center center;
-	height: 30px;
-	width: 30px;
-	display: table-cell;
-}
-
-#portal-club-logos-panel .portal-club-logo:HOVER {
-	background-repeat: no-repeat;
-	background-size: 30px 30px;
-	background-position: center center;
-	height: 30px;
-	width: 30px;
-	display: table-cell;
-}
-
-#portal-club-logos-panel .portal-club-logo-1 {
-		background-image: url("/portal/img/club1.jpg");
-}
-#portal-club-logos-panel .portal-club-logo-2 {
-		background-image: url("/portal/img/club2.png");
-}
-#portal-club-logos-panel .portal-club-logo-3 {
-		background-image: url("/portal/img/club3.png");
-}
-#portal-club-logos-panel .portal-club-logo-4 {
-		background-image: url("/portal/img/club4.png");
-}
-#portal-club-logos-panel .portal-club-logo-5 {
-		background-image: url("/portal/img/club5.png");
-}
-#portal-club-logos-panel .portal-club-logo-6 {
-		background-image: url("/portal/img/club6.png");
-}
-#portal-club-logos-panel .portal-club-logo-7 {
-		background-image: url("/portal/img/club7.png");
-}
-#portal-club-logos-panel .portal-club-logo-8 {
-		background-image: url("/portal/img/club8.png");
-}
-#portal-club-logos-panel .portal-club-logo-9 {
-		background-image: url("/portal/img/club9.png");
-}
-#portal-club-logos-panel .portal-club-logo-10 {
-		background-image: url("/portal/img/club10.png");
-}
-#portal-club-logos-panel .portal-club-logo-11 {
-		background-image: url("/portal/img/club11.png");
-}
-#portal-club-logos-panel .portal-club-logo-12 {
-		background-image: url("/portal/img/club12.jpg");
-}
-#portal-club-logos-panel .portal-club-logo-13 {
-		background-image: url("/portal/img/club13.png");
-}
-#portal-club-logos-panel .portal-club-logo-14 {
-		background-image: url("/portal/img/club14.png");
+#portal-main-header h2 {
+	color: #bbb;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin-bottom: -3px;
 }
 
 #portal-menu-panel-container {
-	background-color: #CB2225;
-	border-top: 2px white solid;
-	box-shadow: 0px 3px 3px gray;
+	background-color: #005DAA;
+	border-top: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #portal-menu-panel {
@@ -118,7 +52,7 @@
 	padding-top: 0px;
 	padding-bottom: 0px;
 	color: white;
-
+	position: relative;
 }
 
 #portal-menu-panel .portal-menu-entry {
@@ -136,14 +70,14 @@
 
 #portal-menu-panel .portal-menu-entry .portal-sub-menu {
 	position: absolute;
-	top: 100%;
+	top: 31px;
 	left: -0px;
 	max-height: 0;
 	overflow: hidden;
 	margin-top: 0px;
-	color: black;
-	background-color: white;
-	box-shadow: 3px 3px 10px gray;
+	color: #FEBD11;
+	background-color: #005DAA;
+	box-shadow: 3px 5px 10px gray;
 	z-index: 3;
 	transition: all 0.5s ease 0;
 	-webkit-transition: all 0.5s ease 0;
@@ -154,30 +88,26 @@
 	padding-left: 10px;
 	padding-top: 4px;
 	padding-bottom: 4px;
-	border-top: 1px silver solid;
 	white-space: nowrap;
 	cursor: pointer;
 	color: black;
 }
 
 #portal-menu-panel .portal-menu-entry .portal-sub-menu DIV A {
-	color: black;
+	color: #FEBD11;
 	padding-left: 0;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 #portal-menu-panel .portal-menu-entry .portal-sub-menu DIV:hover {
-	color: white;
-	background: #CB2225;
+	color: #FEBD11;
 }
 
 #portal-menu-panel .portal-menu-entry .portal-sub-menu DIV:hover A {
 	color: white;
-	background: #CB2225;
 }
 
 #portal-menu-panel .portal-menu-entry .portal-sub-menu DIV:first-child {
-	border-top: 4px red solid;
 }
 
 #portal-menu-panel .portal-menu-entry A {
@@ -199,6 +129,21 @@
 	overflow: hidden;
 	transition: all 0.5s ease 0.5s;
 	-webkit-transition: all 0.5s ease 0.5s;
+}
+
+#portal-menu-panel-container a.menu-login,
+ #portal-menu-panel-container a.menu-login:VISITED {
+	position: absolute;
+	right: 20px;
+	top: 3px;
+	color: #f8f8f8;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#portal-menu-panel-container a.menu-login:HOVER {
+	text-decoration: underline;
 }
 
 #portal-content-container {
@@ -278,11 +223,10 @@
 
 #footer-container {
 	font-family: 'Source Sans Pro', sans-serif;
-	min-width: 1006px;
-	padding-top: 0;
-	padding-bottom: 2px;
-	background-color: #CB2225;
-	border-top: 2px red solid;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #aaa;
 	color: white;
 }
 
@@ -290,22 +234,23 @@
 	position: relative;
 	width: 916px;
 	margin: 0 auto;
-	background-color: #CB2225;
+	color: #58585A;
 }
 
 #portal-article {
-	background-color: white;
 	padding: 10px;
 	display: inline-block;
-	width: 656px;
-	box-shadow: 0px 3px 3px gray;
+	width: 1005px;
 	margin-bottom: 10px;
+	font-style: normal;
+	color: #333;
 }
 
 #portal-article H1 {
+	color: #00246C;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-size: 180%;
+	font-size: 240%;
 	margin-left: 0;
 	font-style: normal;
 	margin-top: 0;
@@ -316,9 +261,13 @@
 }
 #portal-article .abstract {
 	padding-bottom: 20px;
-	font-style: italic;
-	font-size: 120%;
 	text-align: justify;
+	font-family: Georgia;
+	font-style: normal;
+}
+#portal-article p {
+	font-family: Georgia;
+	font-size: 100%;
 }
 
 #portal-article figure {
@@ -331,8 +280,11 @@
 }
 
 #portal-article p {
+	font-size: 120%;
 	padding-top: 0;
 	margin-top: 0;
+	font-family: Georgia;
+	font-style: normal;
 }
 
 .x-portal-widget-gallery {
@@ -416,6 +368,8 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 	overflow: auto;
+	width: 500px;
+	float: left;
 }
 
 .x-portal-widget-category H1 {
@@ -527,4 +481,33 @@
 .x-portal-results-selectable:HOVER {
 	background-color: red;
 	color: white;
+}
+
+@media (max-width: 1006px) {
+	#portal-main-header {
+		width: inherit;
+		padding-left: 30px;
+	}
+	#portal-main-header h1, #portal-main-header h2 {
+		right: 30px;
+	}
+	#portal-menu-panel {
+		width: 100%;
+	}
+	#portal-content-container {
+		width: 100%;
+	}
+	#main-footer {
+		width: 90%;
+	}
+	#portal-article {
+		width: inherit;
+	}
+	.x-portal-widget-category ARTICLE {
+		width: 400px;
+	}
+}
+
+@media (max-width: 927px) {
+	width: 300px;
 }
