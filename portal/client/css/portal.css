@@ -48,6 +48,7 @@ body {
 	border-top: none;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	z-index: 1000;
 }
 
 #portal-menu-panel {
@@ -157,7 +158,7 @@ body {
 }
 
 #portal-main-content {
-	display: table-cell;
+	/*display: table-cell;*/
 	vertical-align: top;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -246,7 +247,7 @@ body {
 #portal-article {
 	padding: 10px;
 	display: inline-block;
-	width: 1005px;
+	width: 100%;
 	margin-bottom: 10px;
 	font-style: normal;
 	color: #333;
@@ -405,18 +406,22 @@ body {
 	top: 0;
 	left: 0;
 	height: 492px;
-	width: 656px;
+	width: 100%;
 	display: none;
 }
 
-.x-portal-widget-showcase-view-textblock {
+.x-portal-widget-showcase-view-container {
 	position: absolute;
 	bottom:0;
 	left: 0;
-	padding: 10px;
+	padding: 0;
 	background-color: rgba(128, 128, 128, 0.6);
 	color: white;
-	width: 636px;
+	width: 100%;
+}
+
+.x-portal-widget-showcase-view-textblock {
+	padding: 10px;
 }
 
 .x-portal-widget-showcase {
@@ -506,9 +511,6 @@ body {
 	}
 	#main-footer {
 		width: 90%;
-	}
-	#portal-article {
-		width: inherit;
 	}
 	.x-portal-widget-category ARTICLE {
 		width: 400px;
