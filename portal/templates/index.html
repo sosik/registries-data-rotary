@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="/portal/css/standalone.css">
 	<link rel="stylesheet" type="text/css" href="/portal/css/portal.css">
 	<link rel="stylesheet" type="text/css" href="/portal/css/font-awesome.min.css">
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
@@ -25,8 +26,15 @@
 			<header id="portal-main-header">
 				<h1 >Rotary club Bratislava International</h1>
 				<h2>Rotary International District 2240</h2>
-				<img class="portal-logo" src="/portal/img/portal-logo.png" alt="logo" title="Rotary club Bratislava International" />
+				<a href="/">
+					<img class="portal-logo" src="/portal/img/portal-logo.png" alt="logo" title="Rotary club Bratislava International" />
+				</a>
 			</header>
+		</div>
+		<div id="mobile-menu-toggler">
+			<a href="" class="toogle-menu" >
+				<i class="fa fa-align-justify"></i>
+			</a>
 		</div>
 		<div id="portal-menu-panel-container">
 			{% block menu %}
@@ -40,7 +48,9 @@
 							</div>
 						</div>
 					{% endfor %}
-					<a class="menu-login" href="https:\\rotary.test.unionsoft.sk">prihlasit</a>
+					<div class="menu-login-container">
+						<a class="menu-login" href="https:\\rotary.test.unionsoft.sk">prihlasit</a>
+					</div>
 				</div>
 			{% endblock menu %}
 		</div>
@@ -63,6 +73,29 @@
 </body>
 <script>
 	$(function() {
+		$('#portal-menu-panel-container').addClass('mobile-hidden');
+		var mainMenuHidden = true;
+		$('.toogle-menu').click(function (e) {
+			if (mainMenuHidden) {
+				$('#portal-menu-panel-container').removeClass('mobile-hidden');
+				$('header h1').css('visibility', 'hidden');
+				$('header h2').css('visibility', 'hidden');
+				mainMenuHidden = false;
+			} else {
+				$('#portal-menu-panel-container').addClass('mobile-hidden');
+				$('header h1').css('visibility', 'visible');
+				$('header h2').css('visibility', 'visible');
+				mainMenuHidden = true;
+			}
+			e.stopPropagation();
+			return false;
+		});
+		$('body').click(function () {
+			$('#portal-menu-panel-container').addClass('mobile-hidden');
+			$('header h1').css('visibility', 'visible');
+			$('header h2').css('visibility', 'visible');
+			mainMenuHidden = true;
+		});
 		$('.x-portal-widget-showcase-view').each(function() {
 			$(this).bind('showcase-next', function() {
 				var idx = $(this).data('showcase-current') || 0;

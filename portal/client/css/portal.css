@@ -39,6 +39,10 @@ body {
 	margin-bottom: -3px;
 }
 
+#mobile-menu-toggler {
+	display: none;	
+}
+
 #portal-menu-panel-container {
 	background-color: #005DAA;
 	border-top: none;
@@ -155,6 +159,8 @@ body {
 #portal-main-content {
 	display: table-cell;
 	vertical-align: top;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 #portal-headlines-section {
@@ -367,6 +373,7 @@ body {
 .x-portal-widget-category ARTICLE {
 	padding-top: 10px;
 	padding-bottom: 10px;
+	margin-right: 10px;
 	overflow: auto;
 	width: 500px;
 	float: left;
@@ -483,7 +490,7 @@ body {
 	color: white;
 }
 
-@media (max-width: 1006px) {
+@media (max-width: 1100px) {
 	#portal-main-header {
 		width: inherit;
 		padding-left: 30px;
@@ -508,6 +515,108 @@ body {
 	}
 }
 
-@media (max-width: 927px) {
-	width: 300px;
+@media (max-width: 880px) {
+	.x-portal-widget-category ARTICLE {
+		width: 300px;
+	}
+}
+
+@media (max-width: 780px) {
+	#portal-menu-panel .portal-menu-entry {
+		display: block;
+		font-size: 140%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		text-align: center;
+	}
+	#portal-menu-panel .portal-menu-entry .portal-sub-menu {
+		position: static;
+		box-shadow: none;
+		max-height: inherit;
+	}
+	#portal-menu-panel .portal-menu-entry A {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	#portal-menu-panel .portal-menu-entry .portal-sub-menu DIV {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	#portal-menu-panel-container {
+		padding-bottom: 0px;
+		position: absolute;
+		top: 46px;
+		left: 0px;
+		width: 300px;
+	}
+	#portal-menu-panel-container a.menu-login,
+			#portal-menu-panel-container a.menu-login:VISITED {
+		position: relative;
+		top: 0px;
+		right: 0px;
+		color: #666;
+	}
+	#portal-menu-panel-container .menu-login-container {
+		background: white;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+	#portal-content-container {
+		padding-top: 4px;
+	}
+	#portal-header-container {
+		padding-bottom: 0px;
+	}
+	#portal-main-header {
+		margin-top: 23px;
+		margin-bottom: 5px;
+	}
+	#portal-main-header h1 {
+		position: relative;
+		margin-bottom: 0px;
+		right: inherit;
+		padding-bottom: 0px;
+		padding-left: 32px;
+	}
+	#portal-main-header h2 {
+		position: relative;
+		right: inherit;
+		margin-top: 1px;
+		margin-bottom: 29px;
+		padding-left: 32px;
+	}
+	#portal-main-header img {
+		margin-left: 32px;
+	}
+	#mobile-menu-toggler {
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		font-size: 30px;
+		padding: 4px 8px 4px 8px;
+		background: #fefefe;
+	}
+	#mobile-menu-toggler a {
+		color: #00246C;	
+	}
+	#mobile-menu-toggler:hover {
+		background: #00246C;
+	}
+	#mobile-menu-toggler:hover a {
+		color: #fefefe;
+	}
+	.mobile-hidden {
+		display: none;
+	}
+}
+
+@media (max-width: 720px) {
+	#portal-menu-panel-container {
+		width: 400px;
+	}
+	.x-portal-widget-category ARTICLE {
+		width: 400px;
+	}
 }
