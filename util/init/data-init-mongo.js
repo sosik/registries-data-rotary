@@ -54,12 +54,12 @@ mongoDriver.init(config.mongoDbURI, function(err) {
 				}
 			}
 
-	_dao_portalMenu.save(menu,function (err,data){
-
-		console.log ('Menu saved');
-
-		mongoDriver.close();
-		});
+	_dao_portalMenu.delete( {}, function (err, data) {
+		_dao_portalMenu.save(menu, function (err, data) {
+			console.log ('Menu saved');
+			mongoDriver.close();
+			});
+	});
 
 });
 
