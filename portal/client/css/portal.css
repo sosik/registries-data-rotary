@@ -372,6 +372,10 @@ body {
 	display: none;
 }
 
+.x-portal-widget-category {
+	clear: both;
+}
+
 .x-portal-widget-category ARTICLE {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -400,6 +404,7 @@ body {
 .x-portal-widget-showcase-view {
 	position: relative;
 	height: 492px;
+	clear: both;
 }
 
 .x-portal-widget-showcase-view article {
