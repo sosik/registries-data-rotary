@@ -1,1 +1,1 @@
-<figure><img src="{{data.img|safe}}"></figure>
+<figure><img src="{{data.img|safe}}" align="middle"></figure>
