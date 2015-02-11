@@ -64,8 +64,9 @@
 						"transCode": "schema.event.organizer",
 						"required": false,
 						"objectLink": {
-							"registry": "organizations",
-							"name": "baseData.name.v"
+							"registry": "people",
+							"name": "baseData.name.v",
+							"surName": "baseData.surName.v"
 						}
 					},
 					"sponsor": {
@@ -73,8 +74,9 @@
 						"transCode": "schema.event.sponsor",
 						"required": false,
 						"objectLink": {
-							"registry": "organizations",
-							"name": "baseData.name.v"
+							"registry": "people",
+							"name": "baseData.name.v",
+							"surName": "baseData.surName.v"
 						}
 					},
 					"entranceFee": {
