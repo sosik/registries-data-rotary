@@ -5,15 +5,15 @@
         "title": "Nová udalosť",
 		"transCode":"schema.event.new",
         "table": "events",
-        "_security": {
-			"_create": {
-				"_static":["Registry - write"]
+        "security": {
+			"create": {
+				"static":["Registry - write"]
 			},
-			"_read": {
-				"_static":["Registry - read"]
+			"read": {
+				"static":["Registry - read"]
 			},
-			"_modify": {
-				"_static":["Registry - write"]
+			"modify": {
+				"static":["Registry - write"]
 			}
 		},
         "properties": {
@@ -63,7 +63,7 @@
 						"title": "Organizátor",
 						"transCode": "schema.event.organizer",
 						"required": false,
-						"$objectLink": {
+						"objectLink": {
 							"registry": "organizations",
 							"name": "baseData.name.v"
 						}
@@ -72,9 +72,9 @@
 						"title": "Sponzor",
 						"transCode": "schema.event.sponsor",
 						"required": false,
-						"$objectLink": {
+						"objectLink": {
 							"registry": "organizations",
-							"name": "baseData.name"
+							"name": "baseData.name.v"
 						}
 					},
 					"entranceFee": {
@@ -91,15 +91,15 @@
         "title": "Udalosť",
 		"transCode":"schema.event.view",
         "table": "events",
-        "_security": {
-			"_create": {
-				"_static":["Registry - write"]
+        "security": {
+			"create": {
+				"static":["Registry - write"]
 			},
-			"_read": {
-				"_static":["Registry - read"]
+			"read": {
+				"static":["Registry - read"]
 			},
-			"_modify": {
-				"_static":["Registry - write"]
+			"modify": {
+				"static":["Registry - write"]
 			}
 		},
 		"properties":{
@@ -110,15 +110,15 @@
         "title": "Udalosť",
 		"transCode":"schema.event.search",
 		"table": "events",
-		"_security": {
-			"_create": {
-				"_static":["Registry - write"]
+		"security": {
+			"create": {
+				"static":["Registry - write"]
 			},
-			"_read": {
-				"_static":["Registry - read"]
+			"read": {
+				"static":["Registry - read"]
 			},
-			"_modify": {
-				"_static":["Registry - write"]
+			"modify": {
+				"static":["Registry - write"]
 			}
 		},
         "listFields": [

@@ -5,19 +5,19 @@
         "title": "Nový termín",
         "xxtransCode": "schema.stadium.title",
         "table": "schedules",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Security - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Security - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Security - write"
                 ]
             }
@@ -50,7 +50,7 @@
                         "title": "Vyberte časť súťaže",
                         "type": "string",
                         "required": true,
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "competitionParts",
                             "name": "baseData.name",
                             "surName": "baseData.competition.refData.name"

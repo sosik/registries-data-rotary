@@ -1,0 +1,18 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "uri://registries/people#",
+
+	"views": {
+		"personalProfile": {
+			"new":{
+				"$ref": "uri://registries/member#new"
+			},
+			"view":{
+				"$ref": "uri://registries/member#new"
+			},
+			"search":{
+				"$ref": "uri://registries/member#new"
+			}
+		}
+	}
+}

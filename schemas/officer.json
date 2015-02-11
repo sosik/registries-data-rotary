@@ -4,8 +4,8 @@
     "new": {
         "title": "Osoba",
         "table": "people",
-        "_security": {
-            "$ref": "uri://registries/people#person/_security"
+        "security": {
+            "$ref": "uri://registries/people#person/security"
         },
         "properties": {
             "baseData": {

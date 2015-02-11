@@ -5,8 +5,8 @@
 		"title": "Nový vzor",
 		"transCode": "schema.mailTemplate.new",
 		"table" : "mailtemplates",
-		"_security" : {
-			"$ref" : "uri://registries/mailtemplates#_security"
+		"security" : {
+			"$ref" : "uri://registries/mailtemplates#security"
 		},
 		"properties" : {
 			"baseData" : {
@@ -18,8 +18,8 @@
 		"title": "Vzor",
 		"transCode": "schema.mailTemplate.view",
 		"table" : "mailtemplates",
-		"_security" : {
-			"$ref" : "uri://registries/mailtemplates#master/new/_security"
+		"security" : {
+			"$ref" : "uri://registries/mailtemplates#master/new/security"
 		},
 		"properties" : {
 			"$ref" : "uri://registries/mailtemplates#master/new/properties"
@@ -29,8 +29,8 @@
 		"title": "Vzor",
 		"transCode": "schema.mailTemplate.search",
 		"table": "mailtemplates",
-		"_security" : {
-			"$ref" : "uri://registries/mailtemplates#_security"
+		"security" : {
+			"$ref" : "uri://registries/mailtemplates#security"
 		},
 		"properties" : {
 			"$ref" : "uri://registries/mailtemplates#master/new/properties"

@@ -6,19 +6,19 @@
 		"transCode": "schema.payments.new",
 		"table": "payments",
 		"_saveBySchema": "uri://registries/payments#view",
-		"_security": {
-			"_create": {
-				"_static": [
+		"security": {
+			"create": {
+				"static": [
 					"Registry - write"
 				]
 			},
-			"_read": {
-				"_static": [
+			"read": {
+				"static": [
 					"Registry - read"
 				]
 			},
-			"_modify": {
-				"_static": [
+			"modify": {
+				"static": [
 					"Registry - write"
 				]
 			}
@@ -110,19 +110,19 @@
 			"create": "event-payment-created",
 			"update": "event-payment-updated"
 		},
-		"_security": {
-			"_create": {
-				"_static": [
+		"security": {
+			"create": {
+				"static": [
 					"Registry - write"
 				]
 			},
-			"_read": {
-				"_static": [
+			"read": {
+				"static": [
 					"Registry - read"
 				]
 			},
-			"_modify": {
-				"_static": [
+			"modify": {
+				"static": [
 					"Registry - write"
 				]
 			}
@@ -239,7 +239,7 @@
 						"title": "Poplatek",
 						"transCode": "schema.payments.baseData.fee",
 						"required": false,
-						"$objectLink": {
+						"objectLink": {
 							"registry": "fees",
 							"setupDate": "baseData.setupDate",
 							"member": "baseData.membershipFee"
@@ -257,19 +257,19 @@
 	},
 	"search": {
 		"table": "payments",
-		"_security": {
-			"_create": {
-				"_static": [
+		"security": {
+			"create": {
+				"static": [
 					"Registry - write"
 				]
 			},
-			"_read": {
-				"_static": [
+			"read": {
+				"static": [
 					"Registry - read"
 				]
 			},
-			"_modify": {
-				"_static": [
+			"modify": {
+				"static": [
 					"Registry - write"
 				]
 			}

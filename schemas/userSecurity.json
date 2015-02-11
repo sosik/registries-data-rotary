@@ -5,19 +5,19 @@
         "title": "Nový člen",
         "transCode": "schema.member.new",
         "table": "people",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Security - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Security - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Security - write"
                 ]
             }
@@ -38,19 +38,19 @@
         "title": "Člen",
         "transCode": "schema.member.view",
         "table": "people",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Security - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Security - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Security - write"
                 ]
             }
@@ -61,19 +61,19 @@
     },
     "search": {
         "table": "people",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Security - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Security - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Security - write"
                 ]
             }

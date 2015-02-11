@@ -5,8 +5,8 @@
         "table": "organizations",
         "title": "Organizácia",
         "transCode": "schema.org.new",
-        "_security": {
-            "$ref": "uri://registries/organization#_security"
+        "security": {
+            "$ref": "uri://registries/organization#security"
         },
         "properties": {
             "baseData": {
@@ -24,8 +24,8 @@
         "table": "organizations",
         "title": "organizácia",
         "transCode": "schema.org.view",
-        "_security": {
-            "$ref": "uri://registries/organization#_security"
+        "security": {
+            "$ref": "uri://registries/organization#security"
         },
         "properties": {
             "baseData": {

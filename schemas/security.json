@@ -88,19 +88,19 @@
 		"type": "object",
 		"table": "securityProfiles",
 		"title": "Security Profiles",
-		"_security": {
-			"_create": {
-				"_static": [
+		"security": {
+			"create": {
+				"static": [
 					"Security - write"
 				]
 			},
-			"_read": {
-				"_static": [
+			"read": {
+				"static": [
 					"Security - read"
 				]
 			},
-			"_modify": {
-				"_static": [
+			"modify": {
+				"static": [
 					"Security - write"
 				]
 			}

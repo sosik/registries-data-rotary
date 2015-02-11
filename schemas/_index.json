@@ -38,5 +38,6 @@
 	"mailTemplates.json",
 	"mailTemplatesMaster.json",
 	"imports.json",
-	"payments.json"
+	"payments.json",
+	"people2.json"
 ]

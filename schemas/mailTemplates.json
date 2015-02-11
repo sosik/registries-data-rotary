@@ -11,19 +11,19 @@
 			"transCode":"schema.mailtemplates.listFields.title"
 		}
 	],
-	"_security": {
-			"_create": {
-				"_static": [
+	"security": {
+			"create": {
+				"static": [
 					"Registry - write"
 				]
 			},
-			"_read": {
-				"_static": [
+			"read": {
+				"static": [
 					"Registry - read"
 				]
 			},
-			"_modify": {
-				"_static": [
+			"modify": {
+				"static": [
 					"Registry - write"
 				]
 			}

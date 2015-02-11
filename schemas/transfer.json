@@ -5,19 +5,19 @@
         "title": "Nová Zmena kl. príslušnosti",
         "transCode": "schema.transfer.new",
         "table": "transfers",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Security - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Security - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Security - write"
                 ]
             }
@@ -57,10 +57,10 @@
 		                "transCode": "schema.transfer.player",
                         "type": "string",
                         "required": true,
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "people",
-                            "surName": "baseData.surName",
-                            "name": "baseData.name",
+                            "surName": "baseData.surName.v",
+                            "name": "baseData.name.v",
                             "playerLicense": "player.playerLicense"
                         }
                     },
@@ -69,9 +69,9 @@
                         "transCode": "schema.transfer.clubFrom",
                         "type": "string",
                         "required": true,
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "organizations",
-                            "name": "club.name"
+                            "name": "club.name.v"
                         }
                     },
                     "clubTo": {
@@ -79,7 +79,7 @@
                         "transCode": "schema.transfer.clubTo",
                         "type": "string",
                         "required": true,
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "organizations",
                             "name": "club.name"
                         }
@@ -87,7 +87,7 @@
                     "season": {
                         "title": "Súťažný ročnik",
                         "transCode": "schema.transfer.season",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "seasons",
                             "name": "baseData.name"
                         },
@@ -206,8 +206,8 @@
         "title": "Nová Zmena kl. príslušnosti",
         "transCode": "schema.transfer.view",
         "table": "transfers",
-        "_security": {
-	        "$ref": "uri://registries/transfer#new/_security"
+        "security": {
+	        "$ref": "uri://registries/transfer#new/security"
         },
         "properties": {
 	        "$ref": "uri://registries/transfer#new/properties"

@@ -12,12 +12,6 @@
 			"photoInfo": {
 				"$ref": "uri://registries/people#person/properties/photoInfo"
 			},
-			"unionMemberEmployerInfo": {
-				"$ref": "uri://registries/people#person/properties/unionMemberEmployerInfo"
-			},
-			"unionMemberUnionsInfo": {
-				"$ref": "uri://registries/people#person/properties/unionMemberUnionsInfo"
-			},
 			"membershipFeeInfo": {
 				"$ref": "uri://registries/people#person/properties/membershipFeeInfo"
 			},

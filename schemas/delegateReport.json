@@ -5,19 +5,19 @@
         "title": "Správa delegáta",
         "xxtransCode": "schema.stadium.title",
         "table": "delegateReports",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Security - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Security - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Security - write"
                 ]
             }
@@ -40,7 +40,7 @@
                         "title": "Stretnutie",
                         "type": "object",
                         "required": true,
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "matches",
                             "stadium": "baseData.stadium.refData.name",
                             "home": "baseData.homeClub.refData.name",

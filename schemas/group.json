@@ -38,7 +38,7 @@
                 "parent": {
 					"title": "Rodič",
                     "transCode": "schema.group.baseData.parent",
-                    "$objectLink": {
+                    "objectLink": {
                         "registry": "groups",
                         "name": "baseData.name"
                     }

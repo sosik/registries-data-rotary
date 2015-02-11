@@ -5,19 +5,19 @@
         "table": "rosters",
         "title": "Nová súpiska",
         "transCode":"schema.roster.new",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Security - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Security - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Security - write"
                 ]
             }
@@ -38,7 +38,7 @@
                         "title": "Klub",
                         "transCode":"schema.roster.club",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "organizations",
                             "name": "club.name"
                         },
@@ -48,7 +48,7 @@
                         "title": "Súťažný ročnik",
                         "transCode":"schema.roster.season",
                         "required": true,
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "seasons",
                             "name": "baseData.name"
                         }
@@ -75,7 +75,7 @@
                         "title": "Veková kategória",
                         "transCode":"schema.roster.ageCategory",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "ageCategories",
                             "name": "baseData.name"
                         },
@@ -85,7 +85,7 @@
                         "title": "Súťaž",
                         "transCode":"schema.roster.competition",
                         "required": true,
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "competitions",
                             "name": "baseData.name"
                         }
@@ -109,7 +109,7 @@
                         "title": "Tréner",
                         "transCode":"schema.roster.coach",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "people",
                             "surName": "baseData.surName",
                             "firstName": "baseData.name",
@@ -128,7 +128,7 @@
                         "title": "Asistent Trénera",
                         "transCode":"schema.roster.aCoach",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "people",
                             "surName": "baseData.surName",
                             "firstName": "baseData.name",
@@ -147,7 +147,7 @@
                         "title": "Asistent Trénera",
                         "transCode":"schema.roster.aCoach",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "people",
                             "surName": "baseData.surName",
                             "firstName": "baseData.name",
@@ -166,7 +166,7 @@
                         "title": "Asistent Trénera",
                         "transCode":"schema.roster.aCoach",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "people",
                             "surName": "baseData.surName",
                             "firstName": "baseData.name",
@@ -185,7 +185,7 @@
                         "title": "Asistent Trénera",
                         "transCode":"schema.roster.aCoach",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "people",
                             "surName": "baseData.surName",
                             "firstName": "baseData.name",
@@ -204,7 +204,7 @@
                         "title": "Asistent Trénera",
                         "transCode":"schema.roster.aCoach",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "people",
                             "surName": "baseData.surName",
                             "firstName": "baseData.name",
@@ -234,7 +234,7 @@
                         "transCode":"schema.roster.players",
                         "type": "array",
                         "items": {
-                            "$objectLink": {
+                            "objectLink": {
                                 "registry": "people",
                                 "surName": "baseData.surName",
                                 "firstName": "baseData.name",
@@ -260,8 +260,8 @@
         "title": "Detail súpisky",
         "transCode":"schema.roster.view",
         "table": "rosters",
-        "_security": {
-            "$ref": "uri://registries/roster#new/_security"
+        "security": {
+            "$ref": "uri://registries/roster#new/security"
         },
         "properties": {
 	        "$ref": "uri://registries/roster#new/properties"
@@ -271,8 +271,8 @@
         "title": "Súpisky",
         "transCode":"schema.roster.search",
         "table": "rosters",
-        "_security": {
-            "$ref": "uri://registries/roster#new/_security"
+        "security": {
+            "$ref": "uri://registries/roster#new/security"
         },
         "listFields": [
             {

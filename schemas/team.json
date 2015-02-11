@@ -40,7 +40,7 @@
 					"club": {
 						"title": "Klub",
 						"required": true,
-						"$objectLink": {
+						"objectLink": {
 							"registry": "organizations",
 							"name": "baseData.name"
 						}
@@ -58,7 +58,7 @@
 					"Stadium": {
 						"title": "Štadión",
 						"required": true,
-						"$objectLink": {
+						"objectLink": {
 							"registry": "stadium",
 							"name": "baseData.name"
 						}

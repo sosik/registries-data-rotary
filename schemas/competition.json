@@ -5,19 +5,19 @@
         "title": "Nová súťaž",
         "transCode": "schema.competition.new",
         "table": "competitions",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Security - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Security - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Security - write"
                 ]
             }
@@ -43,7 +43,7 @@
                     "season": {
                         "title": "Súťažný ročnik",
                         "transCode": "schema.competition.season",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "seasons",
                             "name": "baseData.name"
                         },
@@ -53,7 +53,7 @@
                         "title": "Zväz",
                         "transCode": "schema.competition.association",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "organizations",
                             "name": "association.associationName"
                         },
@@ -63,7 +63,7 @@
                         "title": "Veková kategória",
                         "transCode": "schema.competition.ageCategory",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "ageCategories",
                             "name": "baseData.name"
                         },

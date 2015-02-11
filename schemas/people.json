@@ -3,19 +3,19 @@
 	"id": "uri://registries/people#person",
 	"table": "people",
 	"title": "person",
-	"_security": {
-		"_create": {
-			"_static": [
+	"security": {
+		"create": {
+			"static": [
 				"Registry - write"
 			]
 		},
-		"_read": {
-			"_static": [
+		"read": {
+			"static": [
 				"Registry - read"
 			]
 		},
-		"_modify": {
-			"_static": [
+		"modify": {
+			"static": [
 				"Registry - write"
 			]
 		}
@@ -67,13 +67,15 @@
 					"title": "Meno",
 					"transCode": "schema.people.name",
 					"type": "string",
-					"required": true
+					"required": true,
+					"collate":true
 				},
 				"surName": {
 					"title": "Priezvisko",
 					"transCode": "schema.people.surName",
 					"type": "string",
-					"required": true
+					"required": true,
+					"collate":true
 				},
 				"titleBefore": {
 					"title": "Titul pred",
@@ -120,7 +122,6 @@
 						"schema.people.state.of.person.active",
 						"schema.people.state.of.person.inactive"
 					],
-					"required": false,
 					"render": {
 						"component": "psui-selectbox",
 						"searchable": true
@@ -145,7 +146,6 @@
 						"schema.people.profile.yes",
 						"schema.people.profile.no"
 					],
-					"required": false,
 					"render": {
 						"component": "psui-selectbox",
 						"searchable": true
@@ -154,8 +154,7 @@
 				"firstAssociation": {
 					"title": "Prvotný zväz",
 					"transCode": "schema.people.referee.firstAssociation",
-					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
 					}
@@ -172,7 +171,6 @@
 						"schema.people.state.of.referee.active",
 						"schema.people.state.of.referee.inactive"
 					],
-					"required": false,
 					"render": {
 						"component": "psui-selectbox",
 						"searchable": true
@@ -182,7 +180,7 @@
 					"title": "Aktuálny zväz",
 					"transCode": "schema.people.referee.association",
 					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
 					}
@@ -283,7 +281,7 @@
 					"title": "Prvotný zväz",
 					"transCode": "schema.people.coach.firstAssociation",
 					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
 					}
@@ -310,7 +308,7 @@
 					"title": "Aktuálny zväz",
 					"transCode": "schema.people.coach.association",
 					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
 					}
@@ -423,7 +421,7 @@
 					"title": "Aktuálny zväz",
 					"transCode":"schema.people.officer.association",
 					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
 					}
@@ -432,7 +430,7 @@
 					"title": "Klubová príslušnosť",
 					"transCode":"schema.people.officer.club",
 					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "club.name"
 					}
@@ -687,7 +685,7 @@
 					"title": "Prvotný zväz",
 					"xxtransCode":"schema.people.agent.firstAssociation",
 					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
 					}
@@ -718,7 +716,7 @@
 					"title": "Zväzová príslušnosť",
 					"xxtransCode":"schema.people.agent.association",
 					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
 					}
@@ -817,7 +815,7 @@
 					"title": "Materský klub",
 					"transCode": "schema.people.clubOfFirstRegistration",
 					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "club.name"
 					}
@@ -826,7 +824,7 @@
 					"title": "Klubová príslušnosť",
 					"transCode": "schema.people.club",
 					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "club.name"
 					}
@@ -978,7 +976,7 @@
 					"title": "Zamestnávateľ",
 					"transCode":"schema.people.unionMemberEmployerInfo.employer",
 					"required": false,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "baseData.name"
 					}
@@ -1024,7 +1022,7 @@
 					"title": "Základná organizácia",
 					"transCode":"schema.people.unionMemberUnionsInfo.primaryOrganizationName",
 					"required": true,
-					"$objectLink": {
+					"objectLink": {
 						"registry": "organizations",
 						"name": "baseData.name"
 					}

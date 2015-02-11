@@ -5,19 +5,19 @@
         "title": "Nová časť súťaže",
         "xxtransCode": "schema.stadium.title",
         "table": "competitionParts",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Security - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Security - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Security - write"
                 ]
             }
@@ -45,7 +45,7 @@
                     "competition": {
                         "title": "Súťaž",
                         "type": "object",
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "competitions",
                             "name": "baseData.name"
                         },
@@ -87,7 +87,7 @@
                         "title": "Družstvá",
                         "type": "array",
                         "items": {
-                            "$objectLink": {
+                            "objectLink": {
                                 "registry": "rosters",
                                 "name": "baseData.prName"
                             }

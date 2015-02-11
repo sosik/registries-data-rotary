@@ -5,19 +5,19 @@
         "title": "Nový poplatok",
         "transCode": "schema.fees.new",
         "table": "fees",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Registry - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Registry - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Registry - write"
                 ]
             }
@@ -33,10 +33,10 @@
                         "transCode": "schema.fees.baseData.member",
                         "type": "string",
                         "required": true,
-                        "$objectLink": {
+                        "objectLink": {
                             "registry": "people",
-                            "surName": "baseData.surName",
-                            "name": "baseData.name"
+                            "surName": "baseData.surName.v",
+                            "name": "baseData.name.v"
                         }
                     },
                     "membershipFee": {
@@ -116,19 +116,19 @@
         "title": "Členský príspevok",
         "transCode": "schema.fees.view",
         "table": "fees",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Registry - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Registry - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Registry - write"
                 ]
             }
@@ -141,19 +141,19 @@
         "title": "Členský príspevok",
         "transCode": "schema.fees.search",
         "table": "fees",
-        "_security": {
-            "_create": {
-                "_static": [
+        "security": {
+            "create": {
+                "static": [
                     "Registry - write"
                 ]
             },
-            "_read": {
-                "_static": [
+            "read": {
+                "static": [
                     "Registry - read"
                 ]
             },
-            "_modify": {
-                "_static": [
+            "modify": {
+                "static": [
                     "Registry - write"
                 ]
             }

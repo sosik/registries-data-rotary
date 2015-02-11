@@ -5,8 +5,8 @@
 		"title": "Nový bezpečnostný profil",
 		"transCode": "schema.securityMaster.new",
 		"table":"securityProfiles",
-		"_security" : {
-			"$ref" : "uri://registries/security#profiles/_security"
+		"security" : {
+			"$ref" : "uri://registries/security#profiles/security"
 		},
 		"properties" : {
 			"baseData" : {
@@ -18,8 +18,8 @@
 		"title": "Bezpečnostný profil",
 		"transCode": "schema.securityMaster.view",
 		"table":"securityProfiles",
-		"_security" : {
-			"$ref" : "uri://registries/security#profiles/_security"
+		"security" : {
+			"$ref" : "uri://registries/security#profiles/security"
 		},
 		"properties" : {
 			"baseData" : {
