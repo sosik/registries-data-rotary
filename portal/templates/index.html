@@ -290,6 +290,47 @@
 				}, 3000);
 			});
 		}).triggerHandler('showcase-next');
+		
+		$('.x-portal-widget-category-prev-btn').click(function () {
+			updateCategoryNextPrev(-1);
+		});
+		$('.x-portal-widget-category-next-btn').click(function () {
+			updateCategoryNextPrev(1);
+		});
+		function updateCategoryNextPrev(step) {
+			var pathParts = window.location.pathname.split('/');
+			if (window.location.pathname && window.location.pathname.indexOf('article') > -1) {
+				var currPage = 0;
+				if (pathParts && pathParts.length > 3) {
+					currPage = parseInt(pathParts[3]);
+				}
+				currPage = currPage + step;
+				if (currPage < 0) {
+					currPage = 0;
+				}
+				var pageSize = parseInt($('.x-portal-widget-category-navigation').data('pagesize'));
+				if (currPage >= pageSize) {
+					currPage = pageSize-1;
+				}
+				pathParts[3] = currPage;
+				window.location.pathname = pathParts.join('/');
+			} else {
+				var currPage = 0;
+				if (pathParts && pathParts.length > 1 && pathParts[1]) {
+					currPage = parseInt(pathParts[1]);
+				}
+				currPage = currPage + step;
+				if (currPage < 0) {
+					currPage = 0;
+				}
+				var pageSize = parseInt($('.x-portal-widget-category-navigation').data('pagesize'));
+				if (currPage >= pageSize) {
+					currPage = pageSize-1;
+				}
+				pathParts[1] = currPage;
+				window.location.pathname = pathParts.join('/');
+			}
+		}
 	});
 </script>
 </html>

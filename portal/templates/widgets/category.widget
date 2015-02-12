@@ -6,4 +6,9 @@
 				<div>{{ article.abstract|safe }}</div>
 			<div>
 	</article>
-{% endfor %}</div>
+{% endfor %}
+	<div style=" text-align: right; clear: both;" class="x-portal-widget-category-navigation" data-pagesize="{{data.pageSize}}">
+		<a style=" color: #005DAA; "><i class="fa fa-chevron-left x-portal-widget-category-prev-btn"></i></a>
+		&nbsp;&nbsp;<a style=" color: #005DAA; "><i class="fa fa-chevron-right x-portal-widget-category-next-btn"></i></a>
+	</div>
+</div>
