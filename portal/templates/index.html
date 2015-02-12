@@ -308,9 +308,9 @@
 				if (currPage < 0) {
 					currPage = 0;
 				}
-				var pageSize = parseInt($('.x-portal-widget-category-navigation').data('pagesize'));
-				if (currPage >= pageSize) {
-					currPage = pageSize-1;
+				var nextpage = parseInt($('.x-portal-widget-category-navigation').data('nextpage'));
+				if (currPage >= nextpage) {
+					currPage = nextpage;
 				}
 				pathParts[3] = currPage;
 				window.location.pathname = pathParts.join('/');
@@ -323,9 +323,9 @@
 				if (currPage < 0) {
 					currPage = 0;
 				}
-				var pageSize = parseInt($('.x-portal-widget-category-navigation').data('pagesize'));
-				if (currPage >= pageSize) {
-					currPage = pageSize-1;
+				var nextpage = parseInt($('.x-portal-widget-category-navigation').data('nextpage'));
+				if (currPage >= nextpage) {
+					currPage = nextpage;
 				}
 				pathParts[1] = currPage;
 				window.location.pathname = pathParts.join('/');
