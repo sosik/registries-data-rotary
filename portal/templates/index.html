@@ -292,12 +292,18 @@
 		}).triggerHandler('showcase-next');
 		
 		$('.x-portal-widget-category-prev-btn').click(function () {
-			updateCategoryNextPrev(-1);
+			updateCategoryNextPrev(-1, 'category');
 		});
 		$('.x-portal-widget-category-next-btn').click(function () {
-			updateCategoryNextPrev(1);
+			updateCategoryNextPrev(1, 'category');
 		});
-		function updateCategoryNextPrev(step) {
+		$('.x-portal-widget-overview-prev-btn').click(function () {
+			updateCategoryNextPrev(-1, 'overview');
+		});
+		$('.x-portal-widget-overview-next-btn').click(function () {
+			updateCategoryNextPrev(1, 'overview');
+		});
+		function updateCategoryNextPrev(step, type) {
 			var pathParts = window.location.pathname.split('/');
 			if (window.location.pathname && window.location.pathname.indexOf('article') > -1) {
 				var currPage = 0;
@@ -308,7 +314,7 @@
 				if (currPage < 0) {
 					currPage = 0;
 				}
-				var nextpage = parseInt($('.x-portal-widget-category-navigation').data('nextpage'));
+				var nextpage = parseInt($('.x-portal-widget-' + type + '-navigation').data('nextpage'));
 				if (currPage >= nextpage) {
 					currPage = nextpage;
 				}
@@ -323,7 +329,7 @@
 				if (currPage < 0) {
 					currPage = 0;
 				}
-				var nextpage = parseInt($('.x-portal-widget-category-navigation').data('nextpage'));
+				var nextpage = parseInt($('.x-portal-widget-' + type + '-navigation').data('nextpage'));
 				if (currPage >= nextpage) {
 					currPage = nextpage;
 				}
